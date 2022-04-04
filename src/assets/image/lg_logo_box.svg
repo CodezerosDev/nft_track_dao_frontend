@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="921" height="635" viewBox="0 0 921 635">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#060b17" stop-opacity="0"/>
+      <stop offset="1" stop-color="#060b17"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1516" data-name="Group 1516" transform="translate(-919 -1055)">
+    <g id="Rectangle_1463" data-name="Rectangle 1463" transform="translate(975 1055)" fill="#060b17" stroke="#1f6100" stroke-width="1">
+      <rect width="780" height="634" rx="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="779" height="633" rx="19.5" fill="none"/>
+    </g>
+    <g id="Rectangle_1464" data-name="Rectangle 1464" transform="translate(975 1055)" fill="none" stroke="#1f6100" stroke-width="1">
+      <path d="M20,0H760a20,20,0,0,1,20,20V38a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V20A20,20,0,0,1,20,0Z" stroke="none"/>
+      <path d="M20,.5H760A19.5,19.5,0,0,1,779.5,20V37a.5.5,0,0,1-.5.5H1A.5.5,0,0,1,.5,37V20A19.5,19.5,0,0,1,20,.5Z" fill="none"/>
+    </g>
+    <circle id="Ellipse_423" data-name="Ellipse 423" cx="7.5" cy="7.5" r="7.5" transform="translate(990 1067)" fill="#ff4545"/>
+    <circle id="Ellipse_424" data-name="Ellipse 424" cx="7.5" cy="7.5" r="7.5" transform="translate(1011 1067)" fill="#fff345"/>
+    <circle id="Ellipse_425" data-name="Ellipse 425" cx="7.5" cy="7.5" r="7.5" transform="translate(1032 1067)" fill="#83ff45"/>
+    <rect id="Rectangle_1465" data-name="Rectangle 1465" width="921" height="344" transform="translate(919 1346)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
