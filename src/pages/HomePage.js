@@ -1797,7 +1797,7 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI & NFT worlds in a single token</p>
+                <p>A DAO to merge the DEFI & NFT worlds into a single token</p>
                 <Button className="fs-22px" size="lg">
                   Dashboard
                 </Button>
@@ -1886,25 +1886,19 @@ const HomePage = () => {
               <Row className=" d-flex justify-content-center">
                 <Col xl={7}>
                   <p className="fs-18px text-white fw-300">
-                    NFT Track DAO ($TRACK), based on Ethereum, is a synthetic
-                    asset pegged to the floor prices of the Blue Chip NFT
-                    market. $TRACK is pegged to the ETH floor price of 10 Blue
-                    Chip NFT projects. As a single entry trading derivative,
+                    NFT TrackDAO ($TRACK), built on Ethereum, is a synthetic asset
+                    pegged to the floor prices of the top 10 Blue Chip NFT projects.
+                    As a single entry trading derivative,
                     $TRACK allows investors to speculate on the Blue Chip NFT
                     market simultaneously, rather than having to purchase those
                     assets or select a portfolio. This will be of value to
                     investors interested in the NFT field, those priced out of
                     such assets and those who require immediate liquidity on
-                    their investments without requiring a peer to peer purchase
+                    their investments without requiring a peer-to-peer purchase
                     arrangement.
                   </p>
                   <p className="fs-18px text-white fw-300">
-                    In addition, a reflection on market sales of 5% will create
-                    a fund with which the DAO will be able to buy NFT Blue Chip
-                    Protocol assets to create an asset backed value for $TRACK
-                    holders. Each sale will attract a 5% fee where 5% of the
-                    sale of $TRACK to ETH will be sent to the DAO wallet for DAO
-                    asset purchase
+                    In addition, a reflection on market sales of 5% will create a fund with which the DAO will be able to buy NFT Blue Chip Protocol assets to create an asset-backed value for $TRACK holders. Each sale will attract a 5% fee, where 4% of the sale of $TRACK to ETH will be sent to the DAO wallet for DAO asset purchases, while the remaining 1% will go towards future development of the project.
                   </p>
                 </Col>
               </Row>
@@ -2001,12 +1995,12 @@ const HomePage = () => {
                   </div>
                   <div>
                     <h2 className="gren_title fs-55px fw-700 pb-2 text-center ">
-                      PUBLIC FAIR LAUNCH
+                      Fair Public Launch
                     </h2>
                     <p className="fw-400 fs-32px text-white">
                       Too many DAOs and protocols are negatively impacted by
-                      private and presale buyers purchasing tokens at low prices
-                      and then using DEX liquidity to exit. With NFT tracker,
+                      VCs and other private sale buyers purchasing tokens at low prices
+                      and then using DEX liquidity to exit. with NFT TrackDAO,
                       there is just one sale with the same entry point for all
                       investors.
                     </p>
