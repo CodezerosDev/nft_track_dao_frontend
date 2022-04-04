@@ -20,6 +20,7 @@ const [priceTarget, setPriceTarget] = useState(0)
 const [oracleRate, setOracleRate] = useState(0)
 const [floorPrice, setFloorPrice] = useState()
 const [getAllTrackData, setGetAllTrackData] = useState()
+const [getImages, setGetImages] = useState()
 const [timerDays, setTimerDays] = useState("00")
 const [timerHours, setTimerHours] = useState("00")
 const [timerMinutes, setTimerMinutes] = useState("00")
@@ -55,12 +56,26 @@ useEffect(() => {
     }
 }, [])
 
+const image = [
+  "https://lh3.googleusercontent.com/4CHJYi3NyJ1GWaRPz-TKpUo0A6O2pHHODDa4E8nd-oM8mO25UaD_ZECR_JHDLMDzZgmTGRqKqSRPiCYhCDSUvrV7UJmPpEJKzC-mtg=w286",
+  "https://lh3.googleusercontent.com/O0TPreCr-fnuhYTUGwHPfp3gZgqwAogRrdmkm60Aiozg9kTuyMeIKc_A0I_yBNIJfoISRuGllSHsatOjxxMWHMMxMOhMbpOJ43wM8A=w286",
+  "https://lh3.googleusercontent.com/VcINO7tS_jlFUDPoEAAAcU9scOLfTNKWHB8u2U30BwZMFFS5eUfQeeaDTz_qKAQ1mt6jjUOFg-1bdSprvk53zGpGsstwwLORQur9Zg=w286",
+  "https://lh3.googleusercontent.com/I7yxsg5cBindbstIuEctPiPLgK3QxAmWIU2Uqe5xAK3dAnl5L4TipPygOf5ynpr_7AkxKDPdxD1OaoeTSjdyzH7OYPgQqNHkyWS7xWY=w600",
+  "https://lh3.googleusercontent.com/bY7Shp-jwm7gzfOAD684dD6Qk87utF5m5AHHxSmg0j1Zzx3VOH2wazftdA4Q30LrU7ESRid79O4Wi6VcjRas3mnOh4HuhxYHqQA_7Z8=w286",
+  "https://lh3.googleusercontent.com/CihDNOBwzoCK__mgJgFFyRazaOm-5WGvxp4YdTLLyUiq86seRPPfUN7aZOCArpGvG2RLpBjpy0b8RukVIWD4a0GkLLxJ_6xAPKydZ2I=w286",
+  "https://lh3.googleusercontent.com/2ZfTLFDnlFS-SbVf_h5fV2Dwnx8FTt_EJZajLlY8K08uZXMMkwjMohq5fAfhRoylrk68kaNkCNOhbfQY-FYJbrDqdc6XfetMiwVS=w286",
+  "https://lh3.googleusercontent.com/pjja9yQOgIzrAfFPwgXi-KfQTz-Kxw-jZkDGoA0XGfYJc1325nQ9vc5xi1-eyFtM0lIETWInSGagyOAXsw2DqAIK1IE15jWeE_2U=w286",
+  "https://lh3.googleusercontent.com/SLewJKxPmXfpFEdGBmlH_BMN3MdI5BBPi3xvr0TAKhGRx4f09msqKYzT1U1tZbAU8aSQVmjjfuWMktfHITHRcu5tiBBI7V5FEc15wQ=w286",
+  "https://lh3.googleusercontent.com/AJ_40kO009xD-XE2Wyy0ANYKi9uzVYQAaybVGIWBXMA4cIKdggBWG6WHxXZTv4pdAR0OvA_i7X0hapqWixW12nvqHvclqcRpgcrtsg0=w286",
+]
+
 const onRenderPrice = () => {
   const options = [
       "bayc-honorary-members",
       "cryptopunks",
       "clonex",
       "azuki",
+      "0xmayc-official",
       "doodles-official",
       "cool-cats-nft",
       "veefriends",
@@ -70,6 +85,10 @@ const onRenderPrice = () => {
   
   Promise.all(options.map(res => axios.get(`https://api.opensea.io/api/v1/collection/${res}/stats`))).then((result) => {
     setFloorPrice(result)
+  })
+  
+  Promise.all(options.map(res => axios.get(`https://api.opensea.io/api/v1/collection/${res}`))).then((results) => {
+    setGetImages(results)
   })
 }
 
@@ -345,15 +364,14 @@ useEffect(() => {
                 <Row>
                   {floorPrice && floorPrice.length > 0 &&
                     floorPrice.map((res, i) => {
-                    console.log('floorPrice', floorPrice)
                     const Price = res.data.stats.floor_price
                     return(
                     <Col xl={6} className="mb-3" key={i + 1}>
                       <div className="bluechip_img img-border-box">
                         <div className="bluechip_inner">
-                          <img src={slide_img1} alt="slide_img1" className="img-fluid mb-2" />
+                          <img src={image[i]} alt="slide_img1" className="img-fluid mb-2" />
                           <div className="fs-45px fw-400 text-white">
-                            clone X
+                            {getImages && getImages[i].data.collection.slug}
                           </div>
                           <div>
                             <button className="flor_price_btn fs-18px fw-400  mt-2">FLOOR PRICE -${Price !== null ? Price : 0}</button>
@@ -361,7 +379,7 @@ useEffect(() => {
                         </div>
                         <div className="bluechip_oeverlap">
                           <div className="fs-45px fw-700 text-white">
-                            Clone X
+                          {getImages && getImages[i].data.collection.slug}
                           </div>
                           <p className="fs-18px fw-400 text-white">FLOOR PRICE -${Price !== null ? Price : 0}</p>
                           <div className="flor_price_increse fs-32px fw-400">
