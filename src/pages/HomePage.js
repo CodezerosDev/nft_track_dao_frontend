@@ -2372,9 +2372,7 @@ const HomePage = () => {
                   </p>
                 </Col>
               </Row>
-              <Button className="fs-22px mt-5" size="lg">
-                Discover NTD
-              </Button>
+
             </div>
           </div>
         </Container>
@@ -2475,12 +2473,6 @@ const HomePage = () => {
                       investors.
                     </p>
                   </div>
-                  <button
-                    type="button"
-                    className="fs-22px mt-5 btn btn-primary btn-lg"
-                  >
-                    Request a Demo
-                  </button>
                 </Col>
               </Row>
             </Container>
@@ -2505,12 +2497,6 @@ const HomePage = () => {
                   LBPs accessible for everyone.'
                 </p>
               </div>
-              <button
-                type="button"
-                className="fs-22px mt-5 btn btn-primary btn-lg"
-              >
-                Bid Copper
-              </button>
             </div>
           </div>
         </Container>
@@ -2602,7 +2588,7 @@ const HomePage = () => {
               <Slider {...settings} className="vslider">
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2610,7 +2596,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2618,7 +2604,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2626,7 +2612,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2634,7 +2620,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2761,7 +2747,7 @@ const HomePage = () => {
               <Col xl={6} className="hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
                 <div className="fs-xl-40px gren_title fw-700 ">
-                  Q2 2022
+                  Q3 2022
                 </div>
               </Col>
 
