@@ -10,7 +10,7 @@ const MainRoutes = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<DashboardPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/DashboardPage" element={<DashboardPage />} />
       </Routes>
       <Footer />

@@ -1875,498 +1875,369 @@ const HomePage = () => {
         requestId = null;
       }
     }
-    // if (window.matchMedia("screen and (max-width: 1280px)").matches) {
-    //   gsap.set("#animation_ovelay_dark", {
-    //     top: 80 + "%",
-    //     opacity: 0,
-    //   });
-    //   gsap.set(logopart1ref.current, {
-    //     left: 60 + "%",
-    //     top: 500 + "px",
-    //     width: 100 + "px",
-    //     opacity: 0,
-    //   });
-    //   gsap.set(logopart2ref.current, {
-    //     left: 70 + "%",
-    //     top: 500 + "px",
-    //     width: 100 + "px",
-    //     opacity: 0,
-    //   });
-    //   //first step
-    //   var t1 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
-    //     .to(logopart1ref.current, {
-    //       left: -15 + "%",
-    //       top: 1400 + "px",
-    //       width: 560 + "px",
-    //       opacity: 1,
-    //       zIndex: 2222222,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t11 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
-    //     .to(logopart2ref.current, {
-    //       left: 73 + "%",
-    //       top: 1400 + "px",
-    //       width: 560 + "px",
-    //       opacity: 1,
-    //       zIndex: 2222222,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //second step
-    //   var t2 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
-    //     .to(logopart1ref.current, {
-    //       left: 45 + "%",
-    //       top: 2300 + "px",
-    //       width: 135 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t22 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
-    //     .to(logopart2ref.current, {
-    //       left: 45 + "%",
-    //       top: 2500 + "px",
-    //       width: 135 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //third step
-    //   var t3 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
-    //     .to(logopart1ref.current, {
-    //       left: 20 + "%",
-    //       top: 2590 + "px",
-    //       width: 135 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 200,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t33 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
-    //     .to(logopart2ref.current, {
-    //       left: 71 + "%",
-    //       top: 2590 + "px",
-    //       width: 135 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 200,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //fourth step
-    //   var t4 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(50% - 18px)",
-    //       top: 3194 + "px",
-    //       width: 75 + "px",
-    //       rotateZ: 37,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t44 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(50% - 30px)",
-    //       top: 3194 + "px",
-    //       width: 75 + "px",
-    //       rotateZ: 38,
-    //       rotateX: 150,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //fifth step
-    //   var t5 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(40% - 35px)",
-    //       top: 4500 + "px",
-    //       width: 500 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t55 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(37% - 47px)",
-    //       top: 4500 + "px",
-    //       width: 500 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t555 = gsap
-    //     .timeline({ paused: true })
-    //     .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-    //     .to("#animation_ovelay_dark", {
-    //       top: 50 + "%",
-    //       opacity: 1,
-    //       ease: "none",
-    //       duration: 300,
-    //     })
-    //     .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
-    //   //sixth step
-    //   var t6 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(40% - 35px)",
-    //       top: 5300 + "px",
-    //       width: 500 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t66 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(37% - 47px)",
-    //       top: 5300 + "px",
-    //       width: 500 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //sixth step
-    //   var t7 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(60% - 35px)",
-    //       top: 5800 + "px",
-    //       width: 300 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t77 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(57% - 47px)",
-    //       top: 5800 + "px",
-    //       width: 300 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   // Only update on animation frames
-    //   window.addEventListener("scroll", function () {
-    //     if (!requestId) {
-    //       requestId = requestAnimationFrame(update);
-    //     }
-    //   });
+    if (window.matchMedia("screen and (max-width: 1280px)").matches) {
+      gsap.set("#animation_ovelay_dark", {
+        top: 80 + "%",
+        opacity: 0,
+      });
+      gsap.set(logopart1ref.current, {
+        left: 60 + "%",
+        top: 500 + "px",
+        width: 100 + "px",
+        opacity: 0,
+      });
+      gsap.set(logopart2ref.current, {
+        left: 70 + "%",
+        top: 500 + "px",
+        width: 100 + "px",
+        opacity: 0,
+      });
+      //first step
+      var t1 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
+        .to(logopart1ref.current, {
+          left: -15 + "%",
+          top: 1400 + "px",
+          width: 560 + "px",
+          opacity: 1,
+          zIndex: 2222222,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t11 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
+        .to(logopart2ref.current, {
+          left: 73 + "%",
+          top: 1400 + "px",
+          width: 560 + "px",
+          opacity: 1,
+          zIndex: 2222222,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //second step
+      var t2 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
+        .to(logopart1ref.current, {
+          left: 45 + "%",
+          top: 2300 + "px",
+          width: 135 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t22 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
+        .to(logopart2ref.current, {
+          left: 45 + "%",
+          top: 2500 + "px",
+          width: 135 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //third step
+      var t3 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
+        .to(logopart1ref.current, {
+          left: 20 + "%",
+          top: 2590 + "px",
+          width: 135 + "px",
+          opacity: 1,
+          zIndex: 0,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t33 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
+        .to(logopart2ref.current, {
+          left: 71 + "%",
+          top: 2590 + "px",
+          width: 135 + "px",
+          opacity: 1,
+          zIndex: 0,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //fourth step
+      var t4 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
+        .to(logopart1ref.current, {
+          left: "calc(50% - 37px)",
+          top: 3386 + "px",
+          width: 75 + "px",
+          rotateZ: 37,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t44 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
+        .to(logopart2ref.current, {
+          left: "calc(50% - 50px)",
+          top: 3384 + "px",
+          width: 75 + "px",
+          rotateZ: 38,
+          rotateX: 150,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //fifth step
+      var t5 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
+        .to(logopart1ref.current, {
+          left: "calc(40% - 35px)",
+          top: 4500 + "px",
+          width: 500 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t55 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
+        .to(logopart2ref.current, {
+          left: "calc(37% - 47px)",
+          top: 4500 + "px",
+          width: 500 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t555 = gsap
+        .timeline({ paused: true })
+        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+        .to("#animation_ovelay_dark", {
+          top: 50 + "%",
+          opacity: 1,
+          ease: "none",
+          duration: 300,
+        })
+        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      //sixth step
+      var t6 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
+        .to(logopart1ref.current, {
+          left: "calc(40% - 35px)",
+          top: 5300 + "px",
+          width: 500 + "px",
+          opacity: 1,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t66 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
+        .to(logopart2ref.current, {
+          left: "calc(37% - 47px)",
+          top: 5300 + "px",
+          width: 500 + "px",
+          opacity: 1,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //sixth step
+      var t7 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
+        .to(logopart1ref.current, {
+          left: "calc(60% - 35px)",
+          top: 5800 + "px",
+          width: 300 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t77 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
+        .to(logopart2ref.current, {
+          left: "calc(57% - 47px)",
+          top: 5800 + "px",
+          width: 300 + "px",
+          opacity: 0,
+          zIndex: 0,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      //Eight step
+      var t8 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 5900)
+        .to(logopart1ref.current, {
+          left: 24 + "%",
+          top: 6177 + "px",
+          width: 135 + "px",
+          opacity: 1,
+          rotateZ: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t88 = gsap
+        .timeline({ paused: true })
+        .set(logopart2ref.current, { backgroundColor: "transparent" }, 5900)
+        .to(logopart2ref.current, {
+          left: 65 + "%",
+          top: 6177 + "px",
+          width: 135 + "px",
+          rotateZ: 0,
+          rotateX: 0,
+          opacity: 1,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart2ref.current, { backgroundColor: "transparent" });
+      //nine step
+      var t99 = gsap
+        .timeline({ paused: true })
+        .set(logopart2ref.current, { backgroundColor: "transparent" }, 6300)
+        .to(logopart2ref.current, {
+          left: 94 + "%",
+          top: 7200 + "px",
+          width: 135 + "px",
+          rotateZ: 0,
+          rotateX: 0,
+          opacity: 1,
+          zIndex: 1,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart2ref.current, { backgroundColor: "transparent" });
 
-    //   update();
+      //ten step
+      var t10 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 7300)
+        .to(logopart1ref.current, {
+          left: -3 + "%",
+          top: 7600 + "px",
+          width: 300 + "px",
+          opacity: 1,
+          rotateZ: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t1010 = gsap
+        .timeline({ paused: true })
+        .set(logopart2ref.current, { backgroundColor: "transparent" }, 7300)
+        .to(logopart2ref.current, {
+          left: 94 + "%",
+          top: 7600 + "px",
+          width: 300 + "px",
+          rotateZ: 0,
+          rotateX: 0,
+          opacity: 1,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart2ref.current, { backgroundColor: "transparent" });
+      //ten step
+      var t110 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 7300)
+        .to(logopart1ref.current, {
+          left: 24 + "%",
+          top: 7395 + "px",
+          width: 153 + "px",
+          opacity: 0,
+          rotateZ: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t11110 = gsap
+        .timeline({ paused: true })
+        .set(logopart2ref.current, { backgroundColor: "transparent" }, 7300)
+        .to(logopart2ref.current, {
+          left: 67 + "%",
+          top: 7395 + "px",
+          width: 135 + "px",
+          rotateZ: 0,
+          rotateX: 0,
+          opacity: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 200,
+        })
+        .set(logopart2ref.current, { backgroundColor: "transparent" });
+      // Only update on animation frames
+      window.addEventListener("scroll", function () {
+        if (!requestId) {
+          requestId = requestAnimationFrame(update);
+        }
+      });
 
-    //   // Set timeline time to scrollTop
-    //   function update() {
-    //     t1.time(window.pageYOffset + triggerOffset);
-    //     t11.time(window.pageYOffset + triggerOffset);
-    //     t2.time(window.pageYOffset + triggerOffset);
-    //     t22.time(window.pageYOffset + triggerOffset);
-    //     t3.time(window.pageYOffset + triggerOffset);
-    //     t33.time(window.pageYOffset + triggerOffset);
-    //     t4.time(window.pageYOffset + triggerOffset);
-    //     t44.time(window.pageYOffset + triggerOffset);
-    //     t5.time(window.pageYOffset + triggerOffset);
-    //     t55.time(window.pageYOffset + triggerOffset);
-    //     t555.time(window.pageYOffset + triggerOffset);
-    //     t6.time(window.pageYOffset + triggerOffset);
-    //     t66.time(window.pageYOffset + triggerOffset);
-    //     t7.time(window.pageYOffset + triggerOffset);
-    //     t77.time(window.pageYOffset + triggerOffset);
-    //     requestId = null;
-    //   }
-    // }
-    // if (window.matchMedia("screen and (max-width: 1199px)").matches) {
-    //   gsap.set("#animation_ovelay_dark", {
-    //     top: 80 + "%",
-    //     opacity: 0,
-    //   });
-    //   gsap.set(logopart1ref.current, {
-    //     left: 60 + "%",
-    //     top: 500 + "px",
-    //     width: 100 + "px",
-    //     opacity: 0,
-    //   });
-    //   gsap.set(logopart2ref.current, {
-    //     left: 70 + "%",
-    //     top: 500 + "px",
-    //     width: 100 + "px",
-    //     opacity: 0,
-    //   });
-    //   //first step
-    //   var t1 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
-    //     .to(logopart1ref.current, {
-    //       left: -15 + "%",
-    //       top: 1000 + "px",
-    //       width: 400 + "px",
-    //       opacity: 1,
-    //       zIndex: 2222222,
-    //       ease: "none",
-    //       duration: 400,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t11 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 645)
-    //     .to(logopart2ref.current, {
-    //       left: 87 + "%",
-    //       top: 1000 + "px",
-    //       width: 400 + "px",
-    //       opacity: 1,
-    //       zIndex: 2222222,
-    //       ease: "none",
-    //       duration: 400,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //second step
-    //   var t2 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
-    //     .to(logopart1ref.current, {
-    //       left: 45 + "%",
-    //       top: 2300 + "px",
-    //       width: 135 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t22 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 1600)
-    //     .to(logopart2ref.current, {
-    //       left: 45 + "%",
-    //       top: 2500 + "px",
-    //       width: 135 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //third step
-    //   var t3 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
-    //     .to(logopart1ref.current, {
-    //       left: -1 + "%",
-    //       top: 2757 + "px",
-    //       width: 135 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 200,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t33 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2500)
-    //     .to(logopart2ref.current, {
-    //       left: 92 + "%",
-    //       top: 2757 + "px",
-    //       width: 135 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 200,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //fourth step
-    //   var t4 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(50% - 34px)",
-    //       top: 3313 + "px",
-    //       width: 75 + "px",
-    //       rotateZ: 37,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t44 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 2800)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(50% - 49px)",
-    //       top: 3313 + "px",
-    //       width: 75 + "px",
-    //       rotateZ: 38,
-    //       rotateX: 150,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //fifth step
-    //   var t5 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(40% - 35px)",
-    //       top: 4500 + "px",
-    //       width: 500 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t55 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4000)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(37% - 47px)",
-    //       top: 4500 + "px",
-    //       width: 500 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t555 = gsap
-    //     .timeline({ paused: true })
-    //     .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-    //     .to("#animation_ovelay_dark", {
-    //       top: 60 + "%",
-    //       opacity: 1,
-    //       ease: "none",
-    //       duration: 300,
-    //     })
-    //     .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
-    //   //sixth step
-    //   var t6 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(40% - 35px)",
-    //       top: 5300 + "px",
-    //       width: 500 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t66 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 4800)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(37% - 47px)",
-    //       top: 5300 + "px",
-    //       width: 500 + "px",
-    //       opacity: 1,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   //sixth step
-    //   var t7 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
-    //     .to(logopart1ref.current, {
-    //       left: "calc(60% - 35px)",
-    //       top: 5800 + "px",
-    //       width: 300 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   var t77 = gsap
-    //     .timeline({ paused: true })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" }, 5500)
-    //     .to(logopart2ref.current, {
-    //       left: "calc(57% - 47px)",
-    //       top: 5800 + "px",
-    //       width: 300 + "px",
-    //       opacity: 0,
-    //       zIndex: 0,
-    //       ease: "none",
-    //       duration: 600,
-    //     })
-    //     .set(logopart1ref.current, { backgroundColor: "transparent" });
-    //   // Only update on animation frames
-    //   window.addEventListener("scroll", function () {
-    //     if (!requestId) {
-    //       requestId = requestAnimationFrame(update);
-    //     }
-    //   });
+      update();
 
-    //   update();
-
-    //   // Set timeline time to scrollTop
-    //   function update() {
-    //     t1.time(window.pageYOffset + triggerOffset);
-    //     t11.time(window.pageYOffset + triggerOffset);
-    //     t2.time(window.pageYOffset + triggerOffset);
-    //     t22.time(window.pageYOffset + triggerOffset);
-    //     t3.time(window.pageYOffset + triggerOffset);
-    //     t33.time(window.pageYOffset + triggerOffset);
-    //     t4.time(window.pageYOffset + triggerOffset);
-    //     t44.time(window.pageYOffset + triggerOffset);
-    //     t5.time(window.pageYOffset + triggerOffset);
-    //     t55.time(window.pageYOffset + triggerOffset);
-    //     t555.time(window.pageYOffset + triggerOffset);
-    //     t6.time(window.pageYOffset + triggerOffset);
-    //     t66.time(window.pageYOffset + triggerOffset);
-    //     t7.time(window.pageYOffset + triggerOffset);
-    //     t77.time(window.pageYOffset + triggerOffset);
-    //     requestId = null;
-    //   }
-    // }
+      // Set timeline time to scrollTop
+      function update() {
+        t1.time(window.pageYOffset + triggerOffset);
+        t11.time(window.pageYOffset + triggerOffset);
+        t2.time(window.pageYOffset + triggerOffset);
+        t22.time(window.pageYOffset + triggerOffset);
+        t3.time(window.pageYOffset + triggerOffset);
+        t33.time(window.pageYOffset + triggerOffset);
+        t4.time(window.pageYOffset + triggerOffset);
+        t44.time(window.pageYOffset + triggerOffset);
+        t5.time(window.pageYOffset + triggerOffset);
+        t55.time(window.pageYOffset + triggerOffset);
+        t555.time(window.pageYOffset + triggerOffset);
+        t6.time(window.pageYOffset + triggerOffset);
+        t66.time(window.pageYOffset + triggerOffset);
+        t7.time(window.pageYOffset + triggerOffset);
+        t77.time(window.pageYOffset + triggerOffset);
+        t8.time(window.pageYOffset + triggerOffset);
+        t88.time(window.pageYOffset + triggerOffset);
+        t9.time(window.pageYOffset + triggerOffset);
+        t99.time(window.pageYOffset + triggerOffset);
+        t10.time(window.pageYOffset + triggerOffset);
+        t1010.time(window.pageYOffset + triggerOffset);
+        t10.time(window.pageYOffset + triggerOffset);
+        t1010.time(window.pageYOffset + triggerOffset);
+        t110.time(window.pageYOffset + triggerOffset);
+        t11110.time(window.pageYOffset + triggerOffset);
+        requestId = null;
+      }
+    }
 
   };
   useEffect(() => {
@@ -2396,7 +2267,7 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI & NFT worlds in a single token</p>
+                <p>A DAO to merge the DEFI & NFT worlds into a single token</p>
                 <Button className="fs-22px" size="lg">
                   Dashboard
                 </Button>
@@ -2485,31 +2356,23 @@ const HomePage = () => {
               <Row className=" d-flex justify-content-center">
                 <Col xl={7}>
                   <p className="fs-18px text-white fw-300">
-                    NFT Track DAO ($TRACK), based on Ethereum, is a synthetic
-                    asset pegged to the floor prices of the Blue Chip NFT
-                    market. $TRACK is pegged to the ETH floor price of 10 Blue
-                    Chip NFT projects. As a single entry trading derivative,
+                    NFT TrackDAO ($TRACK), built on Ethereum, is a synthetic asset
+                    pegged to the floor prices of the top 10 Blue Chip NFT projects.
+                    As a single entry trading derivative,
                     $TRACK allows investors to speculate on the Blue Chip NFT
                     market simultaneously, rather than having to purchase those
                     assets or select a portfolio. This will be of value to
                     investors interested in the NFT field, those priced out of
                     such assets and those who require immediate liquidity on
-                    their investments without requiring a peer to peer purchase
+                    their investments without requiring a peer-to-peer purchase
                     arrangement.
                   </p>
                   <p className="fs-18px text-white fw-300">
-                    In addition, a reflection on market sales of 5% will create
-                    a fund with which the DAO will be able to buy NFT Blue Chip
-                    Protocol assets to create an asset backed value for $TRACK
-                    holders. Each sale will attract a 5% fee where 5% of the
-                    sale of $TRACK to ETH will be sent to the DAO wallet for DAO
-                    asset purchase
+                    In addition, a reflection on market sales of 5% will create a fund with which the DAO will be able to buy NFT Blue Chip Protocol assets to create an asset-backed value for $TRACK holders. Each sale will attract a 5% fee, where 4% of the sale of $TRACK to ETH will be sent to the DAO wallet for DAO asset purchases, while the remaining 1% will go towards future development of the project.
                   </p>
                 </Col>
               </Row>
-              <Button className="fs-22px mt-5" size="lg">
-                Discover NTD
-              </Button>
+
             </div>
           </div>
         </Container>
@@ -2599,23 +2462,17 @@ const HomePage = () => {
                     <img src={pub_logo} className=""></img>
                   </div>
                   <div>
-                    <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 text-center ">
-                      PUBLIC FAIR LAUNCH
+                    <h2 className="gren_title fs-55px fw-700 pb-2 text-center ">
+                      Fair Public Launch
                     </h2>
                     <p className="fw-400 fs-32px fs-md-20px text-white">
                       Too many DAOs and protocols are negatively impacted by
-                      private and presale buyers purchasing tokens at low prices
-                      and then using DEX liquidity to exit. With NFT tracker,
+                      VCs and other private sale buyers purchasing tokens at low prices
+                      and then using DEX liquidity to exit. with NFT TrackDAO,
                       there is just one sale with the same entry point for all
                       investors.
                     </p>
                   </div>
-                  <button
-                    type="button"
-                    className="fs-22px mt-5 btn btn-primary btn-lg"
-                  >
-                    Request a Demo
-                  </button>
                 </Col>
               </Row>
             </Container>
@@ -2640,12 +2497,6 @@ const HomePage = () => {
                   LBPs accessible for everyone.'
                 </p>
               </div>
-              <button
-                type="button"
-                className="fs-22px mt-5 btn btn-primary btn-lg"
-              >
-                Bid Copper
-              </button>
             </div>
           </div>
         </Container>
@@ -2737,7 +2588,7 @@ const HomePage = () => {
               <Slider {...settings} className="vslider">
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2745,7 +2596,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2753,7 +2604,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2761,7 +2612,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2769,7 +2620,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">$1,000,000</p>
+                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2896,7 +2747,7 @@ const HomePage = () => {
               <Col xl={6} className="hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
                 <div className="fs-xl-40px gren_title fw-700 ">
-                  Q2 2022
+                  Q3 2022
                 </div>
               </Col>
 
