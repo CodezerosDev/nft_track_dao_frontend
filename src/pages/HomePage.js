@@ -1474,6 +1474,36 @@ const HomePage = () => {
           duration: 200,
         })
         .set(logopart2ref.current, { backgroundColor: "transparent" });
+      //eleven step
+      var t110 = gsap
+        .timeline({ paused: true })
+        .set(logopart1ref.current, { backgroundColor: "transparent" }, 7500)
+        .to(logopart1ref.current, {
+          left: 29 + "%",
+          top: 7053 + "px",
+          width: 135 + "px",
+          opacity: 0,
+          rotateZ: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart1ref.current, { backgroundColor: "transparent" });
+      var t11110 = gsap
+        .timeline({ paused: true })
+        .set(logopart2ref.current, { backgroundColor: "transparent" }, 7500)
+        .to(logopart2ref.current, {
+          left: 64 + "%",
+          top: 7053 + "px",
+          width: 135 + "px",
+          rotateZ: 0,
+          rotateX: 0,
+          opacity: 0,
+          zIndex: 1,
+          ease: "none",
+          duration: 600,
+        })
+        .set(logopart2ref.current, { backgroundColor: "transparent" });
 
       // Only update on animation frames
       window.addEventListener("scroll", function () {
@@ -1507,6 +1537,8 @@ const HomePage = () => {
         t99.time(window.pageYOffset + triggerOffset);
         t10.time(window.pageYOffset + triggerOffset);
         t1010.time(window.pageYOffset + triggerOffset);
+        t110.time(window.pageYOffset + triggerOffset);
+        t11110.time(window.pageYOffset + triggerOffset);
 
         requestId = null;
       }
@@ -2462,10 +2494,10 @@ const HomePage = () => {
                     <img src={pub_logo} className=""></img>
                   </div>
                   <div>
-                    <h2 className="gren_title fs-55px fw-700 pb-2 text-center ">
+                    <h2 className="gren_title  fs-xl-55px fs-md-30px fw-700 pb-2 text-center ">
                       Fair Public Launch
                     </h2>
-                    <p className="fw-400 fs-32px fs-md-20px text-white">
+                    <p className="fw-400 fs-xl-32px fs-lg-30px fs-sm-20px  fs-md-20px text-white">
                       Too many DAOs and protocols are negatively impacted by
                       VCs and other private sale buyers purchasing tokens at low prices
                       and then using DEX liquidity to exit. with NFT TrackDAO,
@@ -2484,7 +2516,7 @@ const HomePage = () => {
           <div className="sale_will_banner text-center">
             <img src={sale_willbanner}></img>
             <div className="ovelay_dark" id="animation_ovelay_dark">
-              <h4 className="fs-55px fs-md-30px fw-700 text-white">
+              <h4 className="fs-xl-55px fs-md-30px fw-700 text-white">
                 Our sale will take place on{" "}
                 <span className="gren_title fw-700">Copperlaunch.com</span>
               </h4>
@@ -2588,7 +2620,7 @@ const HomePage = () => {
               <Slider {...settings} className="vslider">
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white text-center">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2596,7 +2628,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2604,7 +2636,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2612,7 +2644,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2620,7 +2652,7 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-55px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial supply
@@ -2667,7 +2699,7 @@ const HomePage = () => {
             <Row>
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className="bluechip_inner team_member_info">
+                  <div className=" team_member_info">
                     <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
                     <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
                     <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
@@ -2688,7 +2720,7 @@ const HomePage = () => {
               </Col>
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className="bluechip_inner team_member_info">
+                  <div className=" team_member_info">
                     <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
                     <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
                     <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
@@ -2709,7 +2741,7 @@ const HomePage = () => {
               </Col>
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className="bluechip_inner team_member_info">
+                  <div className=" team_member_info">
                     <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
                     <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
                     <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
@@ -2738,18 +2770,18 @@ const HomePage = () => {
         <div className="hr_line">
           <div className="container">
             <Row className="justify-content-around ">
-              <Col xl={6} className="text-center hr_line_left">
+              <div className="col-xl-6 col-lg-4 col text-center hr_line_left">
                 <img src={hrlinelogo} alt="hrlogo" />
                 <div className="fs-xl-40px gren_title fw-700 ">
                   Q2 2022
                 </div>
-              </Col>
-              <Col xl={6} className="hr_line_right">
+              </div>
+              <div className="col-xl-6 col-lg-4 col  hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
                 <div className="fs-xl-40px gren_title fw-700 ">
                   Q3 2022
                 </div>
-              </Col>
+              </div>
 
             </Row>
           </div>
