@@ -71,7 +71,7 @@ const image = [
 
 const onRenderPrice = () => {
   const options = [
-      "bayc-honorary-members",
+      "boredapeyachtclub",
       "cryptopunks",
       "clonex",
       "azuki",
