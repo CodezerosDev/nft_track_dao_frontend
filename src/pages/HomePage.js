@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Slideone from "../pages/Slideone.js";
@@ -2268,9 +2269,9 @@ const HomePage = () => {
               <div className="track_content">
                 <p>$TRACK</p>
                 <p>A DAO to merge the DEFI & NFT worlds into a single token</p>
-                <Button className="fs-22px" size="lg">
+                <NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
-                </Button>
+                </Button></NavLink>
               </div>
             </div>
           </Col>
