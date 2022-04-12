@@ -1,13 +1,14 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../../assets/image/logo.svg";
 import dashogo from "../../assets/image/dash_logo.svg";
-import {Web3Context} from '../../web3/contexts/web3Context'
+import { Web3Context } from '../../web3/contexts/web3Context'
 import { Link } from "react-router-dom";
+import HamburgerMenu from '../HamburgerMenu'
 
 function Header() {
-    const {networkDetails, handleConnect, loading, setLoading} = useContext(Web3Context)
+    const { networkDetails, handleConnect, loading, setLoading } = useContext(Web3Context)
 
     const connectWallet = () => {
         handleConnect()
@@ -39,20 +40,25 @@ function Header() {
             {/* homenav */}
 
             {/* dashboard-nav */}
+            <HamburgerMenu />
+
             <div className="dashboard_logo text-center">
+
                 <div className=' '>
-                    <div>                   
-                      <img src={dashogo} alt="dash_logo" className='img-fluid' />
-                        {!networkDetails.address && 
-                        <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >
-                            Connect
-                        </Button>}
+
+                    <div>
+
+                        <img src={dashogo} alt="dash_logo" className='img-fluid' />
+                        {!networkDetails.address &&
+                            <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >
+                                Connect
+                            </Button>}
                         {networkDetails.address && <Button className="fs-22px connect_btn_head" size="lg">
-                        {networkDetails.address?`...${networkDetails.address.substring(networkDetails.address.length -6)}`:0}
+                            {networkDetails.address ? `...${networkDetails.address.substring(networkDetails.address.length - 6)}` : 0}
                         </Button>}
-                  </div>
-                  <div>
-                       
+                    </div>
+                    <div>
+
                     </div>
                 </div>
 

@@ -57,8 +57,8 @@ const DashboardPage = () => {
   }, [])
 
   const image = [
-    "https://lh3.googleusercontent.com/4CHJYi3NyJ1GWaRPz-TKpUo0A6O2pHHODDa4E8nd-oM8mO25UaD_ZECR_JHDLMDzZgmTGRqKqSRPiCYhCDSUvrV7UJmPpEJKzC-mtg=w286",
-    "https://lh3.googleusercontent.com/O0TPreCr-fnuhYTUGwHPfp3gZgqwAogRrdmkm60Aiozg9kTuyMeIKc_A0I_yBNIJfoISRuGllSHsatOjxxMWHMMxMOhMbpOJ43wM8A=w286",
+    "https://lh3.googleusercontent.com/Czn9y9yAUpvuI6SGoVSnNe29_kZ84Ey_9saCrdpA7a5j2_8IWlUFSBM3_GMkjBPmbG8AS1jWtrzgQG4nCsyAlR_VtEI0fXMeKD8ILA=w286",
+    "https://lh3.googleusercontent.com/6PFIYICLqlR-f7oDeROPorLObT-tjNEiUBkY0r-hnrjA5ypcvqyC5UhXBcuHvQuadW8ac1MVveevIw9usMz6kC0MZ6aQLSKXBSZtcQ=w286",
     "https://lh3.googleusercontent.com/VcINO7tS_jlFUDPoEAAAcU9scOLfTNKWHB8u2U30BwZMFFS5eUfQeeaDTz_qKAQ1mt6jjUOFg-1bdSprvk53zGpGsstwwLORQur9Zg=w286",
     "https://lh3.googleusercontent.com/I7yxsg5cBindbstIuEctPiPLgK3QxAmWIU2Uqe5xAK3dAnl5L4TipPygOf5ynpr_7AkxKDPdxD1OaoeTSjdyzH7OYPgQqNHkyWS7xWY=w600",
     "https://lh3.googleusercontent.com/bY7Shp-jwm7gzfOAD684dD6Qk87utF5m5AHHxSmg0j1Zzx3VOH2wazftdA4Q30LrU7ESRid79O4Wi6VcjRas3mnOh4HuhxYHqQA_7Z8=w286",
@@ -71,8 +71,8 @@ const DashboardPage = () => {
 
   const onRenderPrice = () => {
     const options = [
-      "bayc-honorary-members",
-      "cryptopunks",
+      "boredapeyachtclub",
+      "invisiblefriends",
       "clonex",
       "azuki",
       "0xmayc-official",
@@ -186,7 +186,7 @@ const DashboardPage = () => {
           <Row>
             <Col xl={3} lg={6} className="mb-md-2">
               <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Next Rebase</p>
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Next Recalibrate</p>
                 <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0"><span>{timerHours}H : {timerMinutes}M : {timerSeconds}S</span></p>
                 <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
               </div>
@@ -370,7 +370,7 @@ const DashboardPage = () => {
                           <div className="bluechip_img img-border-box">
                             <div className="bluechip_inner">
                               <img src={image[i]} alt="slide_img1" className="img-fluid mb-2" />
-                              <div className="fs-45px fw-400 text-white">
+                              <div className="fs-25px fw-400 text-white">
                                 {getImages && getImages[i].data.collection.slug}
                               </div>
                               <div>

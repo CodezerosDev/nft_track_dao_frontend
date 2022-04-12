@@ -47,6 +47,9 @@ body {
 }
 .infinite_logo{
     position: relative;
+    @media only screen and (max-width:767px) {
+      margin-top: 23px;
+    }
     &::before{
         content: "";
         background-image: url(../src/assets/image/round_balls.svg);
@@ -84,7 +87,7 @@ body {
     padding-bottom: 6%;
     overflow-x: hidden;
     overflow: hidden;
-    width: 104%;
+    width:100%;
 .green_strips {
     background-color: #98FF11;
     transform: matrix(1, 0.1, -0.1, 0.99, 0,131);
@@ -314,7 +317,7 @@ section.slider_one {
   padding: 14% 0 0;
   &::before{
     content: "";
-    background: url("./assets/image/roundedshap.svg")no-repeat scroll 0 0 / 100% auto;
+    background: url("./assets/image/roundedshap.svg") no-repeat scroll 0 0 / 100% auto;
     position: absolute;
     width: 100%;
     height:500px;
@@ -392,6 +395,9 @@ section.slider_one {
       z-index: 999999;
       transform: translate(-50% ,-50%);
       padding: 108px 131px 14px 128px;
+        @media only screen and (max-width: 600px) {
+            padding: 0px;
+        }
      }
   }
 }
@@ -412,23 +418,24 @@ section.slider_one {
   padding:12% 0;
   .counting_amount {
     position: relative;
-  
-      p {
-      background: transparent linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #71FFA7 100%) 0% 0% no-repeat padding-box;
-      background: transparent linear-gradient(283deg, #8DFF26 0%, #71FFA7 100%) 0% 0% no-repeat padding-box;
-      box-shadow: 0px 0px 30px #71ffa780;
-      border-radius: 60px;
-      opacity: 1;
-      width: 510px;
-      height: 87px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        p {
+          background: transparent linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #71FFA7 100%) 0% 0% no-repeat padding-box;
+          background: transparent linear-gradient(283deg, #8DFF26 0%, #71FFA7 100%) 0% 0% no-repeat padding-box;
+          box-shadow: 0px 0px 30px #71ffa780;
+          border-radius: 60px;
+          opacity: 1;
+          width: 510px;
+          height: 87px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin: 0 auto;
-            
-          }
+            @media only screen and (max-width: 576px) {
+              width: 100%;
+            }        
+        }
        }
-      }
+    }
 
 .nft_dao{
   p{
@@ -543,7 +550,10 @@ footer {
     padding: 12px 21px;
     letter-spacing: 0px;
     color: #1A1A1A!important;
-        font-weight: bold!important
+    font-weight: bold!important;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
   }
 }
 .flor_price_increse {
@@ -558,7 +568,8 @@ footer {
         width: 100%;
         height: 100%;
         cursor: pointer;
-        transition: .5s ease;
+      
+        z-index: -1;
       }
       &:hover .bluechip_oeverlap{
             opacity: 1;
@@ -573,6 +584,14 @@ footer {
               justify-content: center;
               border: 15px solid #8DFF26;
               overflow: hidden;
+              z-index: 1;
+      }
+      .bluechip_inner{
+        padding-bottom: 81px;
+        img{
+          max-width: 100%;
+          max-height: 300px;
+        }
       }
 }
 .days_btn{
@@ -626,6 +645,11 @@ footer {
   position: absolute;
   right: 22px;
   top: 42px;
+  @media only screen and (max-width:576px) {
+    right: 141px;
+    top: 123px;
+  }
+
 }
 
 .cust_loader {
@@ -641,4 +665,49 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.hr_line_logo{
+  position: relative;
+  margin-top: 185px;
+  img {
+    max-width: 105px;
+    max-height: 104px;
+  }
+  &::after{ 
+    content: "";
+    position: absolute;
+    background: transparent linear-gradient(180deg, #71FFA7 0%, var(--unnamed-color-8dff26) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #71FFA7 0%, #8DFF26 100%) 0% 0% no-repeat padding-box;
+    height: 5px;
+    width: 100%;
+    top: 50px;
+    z-index: -1;
+  }
+   .hr_line{
+     .hr_line_right {
+        padding-left: 17%;
+        @media only screen and (max-width: 576px) {
+         padding-left: 0px;
+         text-align: center;
+        }
+      }
+      .hr_line_left {
+        padding-left: 13%;
+          @media only screen and (max-width: 576px) {
+           padding-left: 0px;
+            text-align: center;
+          }
+     
+      }
+   }
+}
+.Blue_chip_nft {
+.bluechip_img {
+    .bluechip_oeverlap{
+      transition: 0.5s ease;
+    }
+  }
+}
+.MenuButton{
+  color: #20fb04;
 }
