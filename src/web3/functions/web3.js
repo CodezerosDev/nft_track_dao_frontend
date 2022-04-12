@@ -27,7 +27,7 @@ const loadBlockChainData = async (
     networkDetails,
     setLoading
 ) => {
-    
+
     try {
         const web3 = await window.web3;
         const wallet = "metamask";
