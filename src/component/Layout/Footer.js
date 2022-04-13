@@ -7,13 +7,13 @@ const Footer = () => {
     return <>
         <footer>
             <Container>
-                <div className="text-center">
+                <div className="text-center mb-3">
                     <img src={logo} alt="logo" className='img-fluid' />
                 </div>
 
                 <div className="copy_right d-flex justify-content-between">
                     <div className="">
-                        <p className="mb-0">© NFT Track Dao 2022</p>
+                        <p className="mb-0">&copy; NFT Track Dao 2022</p>
                     </div>
                     <div className="">
                         <p className="mb-0 fs-16px fw-300"><img src={socialfooter} /></p>

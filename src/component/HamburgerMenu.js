@@ -1,9 +1,11 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MenuIcon from '@mui/icons-material/Menu';
+
+// import Menu from '@mui/material/Menu';
+// import MenuItem from '@mui/material/MenuItem';
+// import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
+import menuIcon from '../assets/image/hamburger-menu.svg'
+import {  Button } from "react-bootstrap";
 
 export default function BasicMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,17 +22,11 @@ export default function BasicMenu() {
         setAnchorEl(null);
     };
     return (
-        <div>
-            <Button
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-            >
-                <MenuIcon className='MenuButton' />
+        <div className="nav_toggle_wrapper ms-4 mb-2">
+            <Button className="btn btn_no_style nav_toggle">
+                <img src={menuIcon}  alt="menu"/>
             </Button>
-            <Menu
+            {/* <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
@@ -40,7 +36,7 @@ export default function BasicMenu() {
                 }}
             >
                 <MenuItem onClick={handleDashboard}>Dashboard</MenuItem>
-            </Menu>
+            </Menu> */}
         </div>
     );
 }

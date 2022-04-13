@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="150" viewBox="0 0 240 150">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#72ffb6"/>
+      <stop offset="1" stop-color="#8cff2f"/>
+    </linearGradient>
+    <filter id="Ellipse_420" x="0" y="0" width="150.296" height="150" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#37d47b" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.991" y1="0.63" x2="0.01" y2="0.371" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6cffd3"/>
+      <stop offset="1" stop-color="#9bff00"/>
+    </linearGradient>
+    <filter id="Path_2459" x="12.645" y="12.197" width="125.004" height="125.606" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-2"/>
+      <feFlood flood-color="#6ab04d" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1534" data-name="Group 1534" transform="translate(-115 -15)">
+    <text id="Dashboard" transform="translate(240 96)" fill="#8dff26" font-size="22" font-family="SpaceGrotesk-SemiBold, Space Grotesk" font-weight="600"><tspan x="0" y="0">Dashboard</tspan></text>
+    <g id="Group_1522" data-name="Group 1522" transform="translate(-178)">
+      <g transform="matrix(1, 0, 0, 1, 293, 15)" filter="url(#Ellipse_420)">
+        <path id="Ellipse_420-2" data-name="Ellipse 420" d="M25.148-5A30,30,0,1,1-5,25,30.108,30.108,0,0,1,25.148-5Zm0,54.957A24.957,24.957,0,1,0,.068,25,25.047,25.047,0,0,0,25.148,49.957Z" transform="translate(50 50)" fill="url(#linear-gradient)"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 293, 15)" filter="url(#Path_2459)">
+        <path id="Path_2459-2" data-name="Path 2459" d="M51.412,59.966a2.083,2.083,0,0,1-1.48-.613L34.379,43.8h0a2.628,2.628,0,0,1-.182-.233,2.028,2.028,0,0,1-.193-.36,2.154,2.154,0,0,1-.117-.39,1.9,1.9,0,0,1-.041-.416A2.153,2.153,0,0,1,33.883,42,2.534,2.534,0,0,1,34,41.6a2.027,2.027,0,0,1,.193-.355,1.961,1.961,0,0,1,.248-.345,2.134,2.134,0,0,1,1.49-.608,1.789,1.789,0,0,1,.4.041,1.936,1.936,0,0,1,.39.117,2.027,2.027,0,0,1,.36.193,2.224,2.224,0,0,1,.319.258l.076.081,11.784,11.8,2.056,2.058a20.043,20.043,0,0,0-1.4-26.636,2.1,2.1,0,0,1,.279-3.193,1.982,1.982,0,0,1,1.155-.365,2.286,2.286,0,0,1,1.612.684,24.122,24.122,0,0,1-.086,34.025A2.083,2.083,0,0,1,51.412,59.966ZM33.467,59.7a2.083,2.083,0,0,1-1.48-.613,24.153,24.153,0,0,1,0-34.111,2.093,2.093,0,0,1,2.96,0L50.525,40.552a2.093,2.093,0,1,1-2.96,2.96l-7.951-7.955-6.066-6.068a20.028,20.028,0,0,0,1.4,26.616,2.113,2.113,0,0,1-1.48,3.593Z" transform="translate(32.71 32.84)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Slideone from "../pages/Slideone.js";
 import Introslides from "../pages/IntroSlides.js";
-import logobox from "../assets/image/lg_logo_box.svg";
+// import logobox from "../assets/image/lg_logo_box.svg";
 import logoanimate from "../assets/image/lg_logo.svg";
 import arrowdropup from "../assets/image/arrow_drop_up.svg";
 import arrowdropdown from "../assets/image/arrow_drop_down.svg";
@@ -2300,7 +2300,7 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI & NFT worlds into a single token</p>
+                <p>A DAO to merge the DEFI &amp; NFT worlds into a single token</p>
                 <NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
                 </Button></NavLink>
@@ -2309,7 +2309,7 @@ const HomePage = () => {
           </Col>
           <Col lg={6}>
             <div className="infinite_logo ">
-              {/*<img src={logobox} alt="logobox" className="img-fluid"></img>*/}
+              {/* <img src={logobox} alt="logobox" className="img-fluid"></img> */}
 
               <div className="lg_logoanimate rotate">
                 <img

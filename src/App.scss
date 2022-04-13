@@ -47,6 +47,7 @@ body {
 }
 .infinite_logo{
     position: relative;
+    min-height: 538px;
     @media only screen and (max-width:767px) {
       margin-top: 23px;
     }
@@ -207,6 +208,7 @@ section.what_track {
     }
 section.slider_one {
     border-top: 1px solid #313F63;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 .slide_border{
@@ -641,16 +643,15 @@ footer {
     margin-bottom: -11px;
   }
 }
-.connect_btn_head {
-  position: absolute;
-  right: 22px;
-  top: 42px;
-  @media only screen and (max-width:576px) {
-    right: 141px;
-    top: 123px;
-  }
-
-}
+// .connect_btn_head {
+  // position: absolute;
+  // right: 22px;
+  // top: 42px;
+  // @media only screen and (max-width:576px) {
+  //   right: 141px;
+  //   top: 123px;
+  // }
+// }
 
 .cust_loader {
   z-index: 9999;
@@ -710,4 +711,23 @@ footer {
 }
 .MenuButton{
   color: #20fb04;
+}
+
+.btn_no_style{
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  &:hover{
+    box-shadow: none;
+    background: transparent;
+  }
+  &:focus{
+    box-shadow: none;
+    background: transparent;
+  }
+}
+.nav_toggle{
+  img{
+    max-width: 30px;
+  }
 }

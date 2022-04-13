@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../../assets/image/logo.svg";
+// import logo from "../../assets/image/logo.svg";
 import dashogo from "../../assets/image/dash_logo.svg";
 import { Web3Context } from '../../web3/contexts/web3Context'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import HamburgerMenu from '../HamburgerMenu'
 
 function Header() {
@@ -16,9 +16,9 @@ function Header() {
 
     return (
         <div className="App">
-            {/* homenav */}
-
-            {/* <Navbar expand="lg" className='pt-5'>
+            <div className="d-flex mt-4 align-items-center">
+                {/* homenav */}
+                {/* <Navbar expand="lg" className='pt-5'>
                 <Container>
                     <Navbar.Brand href="#home"><img src={logo} alt="logo" className='img-fluid' /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -37,33 +37,22 @@ function Header() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar> */}
-            {/* homenav */}
+                {/* homenav */}
+                {/* dashboard-nav */}
 
-            {/* dashboard-nav */}
-            <HamburgerMenu />
-
-            <div className="dashboard_logo text-center">
-
-                <div className=' '>
-
-                    <div>
-
-                        <img src={dashogo} alt="dash_logo" className='img-fluid' />
-                        {!networkDetails.address &&
-                            <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >
-                                Connect
-                            </Button>}
-                        {networkDetails.address && <Button className="fs-22px connect_btn_head" size="lg">
-                            {networkDetails.address ? `...${networkDetails.address.substring(networkDetails.address.length - 6)}` : 0}
+                <HamburgerMenu />
+                <div className="mx-auto dashboard_logo"><img src={dashogo} alt="dash_logo" className='img-fluid' /></div>
+                <div className="btn_connect text-center me-4">
+                    {!networkDetails.address &&
+                        <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >
+                            Connect
                         </Button>}
-                    </div>
-                    <div>
-
-                    </div>
+                    {networkDetails.address && <Button className="fs-22px connect_btn_head" size="lg">
+                        {networkDetails.address ? `...${networkDetails.address.substring(networkDetails.address.length - 6)}` : 0}
+                    </Button>}
                 </div>
-
+                {/* dashboard-nav */}
             </div>
-            {/* dashboard-nav */}
         </div>
     );
 }
