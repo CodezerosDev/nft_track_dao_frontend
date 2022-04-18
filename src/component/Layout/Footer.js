@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import logo from "../../assets/image/logo.svg";
-import socialfooter from "../../assets/image/social.png";
+import socialfooter from "../../assets/image/socialIcons.png";
 const Footer = () => {
     return <>
         <footer>
