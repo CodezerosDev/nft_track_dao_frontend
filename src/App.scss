@@ -743,7 +743,6 @@ footer {
 
 .bm-item {
   display: inline-block;
-
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
@@ -756,14 +755,17 @@ footer {
 }
 
 .bm-burger-button {
-  margin-right: 90%;
+  // margin-right: 90%;
   position: fixed;
   width: 36px;
   height: 30px;
   right: 36px;
   top: 36px;
 }
-
+.bm-menu-wrap{
+  top: 0!important;
+  z-index: 11111111!important;
+}
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #84eb0e;
@@ -773,16 +775,19 @@ footer {
 .bm-cross-button {
   height: 24px;
   width: 24px;
+  right: auto !important;
+  left: 20px !important;
+  top: 15px!important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #8DFF26;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgba(0, 0, 0, 0.567);
+  background: rgba(64, 64, 64, 1);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
