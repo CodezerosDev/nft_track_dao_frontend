@@ -16,10 +16,7 @@ function Header() {
 
     return (
         <div className="App">
-
             <div className="d-flex mt-4 align-items-center">
-                <HamburgerMenu />
-
                 {/* homenav */}
                 {/* <Navbar expand="lg" className='pt-5'>
                 <Container>
@@ -42,7 +39,7 @@ function Header() {
             </Navbar> */}
                 {/* homenav */}
                 {/* dashboard-nav */}
-
+                <HamburgerMenu />
                 <div className="mx-auto dashboard_logo"><img src={dashogo} alt="dash_logo" className='img-fluid' /></div>
                 <div className="btn_connect text-center me-4">
                     {!networkDetails.address &&
