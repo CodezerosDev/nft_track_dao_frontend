@@ -40,7 +40,9 @@ function Header() {
                 {/* homenav */}
                 {/* dashboard-nav */}
                 <HamburgerMenu />
-                <div className="mx-auto dashboard_logo"><img src={dashogo} alt="dash_logo" className='img-fluid' /></div>
+                {<div className="mx-auto dashboard_logo">
+                    {/*<img src={dashogo} alt="dash_logo" className='img-fluid' />*/}
+                </div>}
                 <div className="btn_connect text-center me-4">
                     {!networkDetails.address &&
                         <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >

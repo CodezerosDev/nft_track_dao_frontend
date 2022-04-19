@@ -2301,9 +2301,9 @@ const HomePage = () => {
               <div className="track_content">
                 <p>$TRACK</p>
                 <p>A DAO to merge the DEFI &amp; NFT worlds into a single token</p>
-                <NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
+                {/*<NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
-                </Button></NavLink>
+  </Button></NavLink>*/}
               </div>
             </div>
           </Col>

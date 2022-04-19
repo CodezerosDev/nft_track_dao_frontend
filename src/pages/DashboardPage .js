@@ -186,7 +186,7 @@ const DashboardPage = () => {
           <Row>
             <Col xl={3} lg={6} className="mb-md-2">
               <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Next Recalibrate</p>
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Next Recalibration</p>
                 <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0"><span>{timerHours}H : {timerMinutes}M : {timerSeconds}S</span></p>
                 <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
               </div>
