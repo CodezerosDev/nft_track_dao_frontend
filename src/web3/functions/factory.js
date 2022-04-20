@@ -12,7 +12,7 @@ function getFirstInstance(web3) {
                     enviornment.FirstABI,
                     enviornment.FirstAddress
                 );
-                
+
                 if (Instance) {
                     resolve(Instance);
                 } else {
@@ -33,7 +33,7 @@ function getSecondInstance(web3) {
                     enviornment.SecondABI,
                     enviornment.SecondAddress
                 );
-                
+
                 if (Instance) {
                     resolve(Instance);
                 } else {
@@ -54,7 +54,7 @@ function getThirdInstance(web3) {
                     enviornment.ThirdABI,
                     enviornment.ThirdAddress
                 );
-                
+
                 if (Instance) {
                     resolve(Instance);
                 } else {
@@ -76,7 +76,7 @@ function getTotalSupply(ercInstance, walletAddress) {
                     //  console.log('data', data)
                     //  console.log('data', parseFloat(data / enviornment.divideValue).toFixed(9))
                     if (err) {
-                        reject({ error: err});
+                        reject({ error: err });
                     } else {
                         if (data > 0) {
                             resolve(data);
@@ -100,7 +100,7 @@ function getBalanceOf(ercInstance, walletAddress) {
                 .call({ from: walletAddress }, (err, data) => {
 
                     if (err) {
-                        reject({ error: err});
+                        reject({ error: err });
                     } else {
                         if (data > 0) {
                             resolve(data);
@@ -123,7 +123,7 @@ function getDataSecond(ercInstance, walletAddress) {
                 .getData()
                 .call({ from: walletAddress }, (err, data) => {
                     if (err) {
-                        reject({ error: err});
+                        reject({ error: err });
                     } else {
                         resolve(parseFloat(data[0] / enviornment.divideValue).toFixed(2))
                     }
@@ -142,7 +142,7 @@ function getDataThird(ercInstance, walletAddress) {
                 .getData()
                 .call({ from: walletAddress }, (err, data) => {
                     if (err) {
-                        reject({ error: err});
+                        reject({ error: err });
                     } else {
                         if (data[0] > 0) {
                             resolve(parseFloat(data[0] / enviornment.divideValue).toFixed(2));

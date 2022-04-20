@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Slideone from "../pages/Slideone.js";
 import Introslides from "../pages/IntroSlides.js";
-import logobox from "../assets/image/lg_logo_box.svg";
+// import logobox from "../assets/image/lg_logo_box.svg";
 import logoanimate from "../assets/image/lg_logo.svg";
 import arrowdropup from "../assets/image/arrow_drop_up.svg";
 import arrowdropdown from "../assets/image/arrow_drop_down.svg";
@@ -2299,16 +2300,16 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI & NFT worlds into a single token</p>
-                <Button className="fs-22px" size="lg">
+                <p>A DAO to merge the DEFI &amp; NFT worlds into a single token</p>
+                {/*<NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
-                </Button>
+  </Button></NavLink>*/}
               </div>
             </div>
           </Col>
           <Col lg={6}>
             <div className="infinite_logo ">
-              <img src={logobox} alt="logobox" className="img-fluid"></img>
+              {/* <img src={logobox} alt="logobox" className="img-fluid"></img> */}
 
               <div className="lg_logoanimate rotate">
                 <img
@@ -2321,62 +2322,7 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
-      <section className="marq_strips ">
-        <div
-          className={`green_strips ${scroll ? "strip_tras_add" : "strip_tras_remove"
-            }`}
-        >
-          <marquee behavior="scroll" direction="left" scrollamount="20">
-            <div className="d-flex justify-content-between">
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px">Treasury Balance</span> $434,561,892{" "}
-                  <img src={arrowdropup}></img>
-                </p>
-              </div>
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px">Treasury Balance</span> $309,561,892{" "}
-                  <img src={arrowdropdown}></img>
-                </p>
-              </div>
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px">Treasury Balance</span> $309,561,892{" "}
-                  <img src={arrowdropup}></img>
-                </p>
-              </div>
-            </div>
-          </marquee>
-        </div>
-        <div
-          className={`blue_strips ${scroll ? "strip_tras_add" : "strip_tras_remove"
-            }`}
-        >
-          <marquee behavior="scroll" direction="right" scrollamount="20">
-            <div className="d-flex justify-content-between">
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px fw-700">Last 7 Days</span>
-                  $23,726,783,682 <img src={arrowdropdown}></img>
-                </p>
-              </div>
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px fw-700">NFT Currency</span>{" "}
-                  $309,561,892 <img src={arrowdropup}></img>
-                </p>
-              </div>
-              <div>
-                <p className="fs-45px m-0 fw-400">
-                  <span className="fs-22px fw-700">Last 7 Days</span>{" "}
-                  $309,561,892 <img src={arrowdropup}></img>
-                </p>
-              </div>
-            </div>
-          </marquee>
-        </div>
-      </section>
+
       <section className="what_track text-center sale_will_take">
         <Container>
           <div className="sale_will_banner text-center ">
@@ -2409,62 +2355,7 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section className="dark_strip">
-        <div className="">
-          <marquee behavior="scroll" direction="left" scrollamount="5">
-            <div className="d-flex justify-content-between">
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-              <div>
-                <p className="gren_title fs-45px fw-700">
-                  Chainlink{" "}
-                  <span className="strip_text_cl fs-45px fw-700">
-                    Each sale will attract a 5%
-                  </span>
-                </p>
-              </div>
-            </div>
-          </marquee>
-        </div>
-      </section>
+
       <section className="slider_one">
         <Slideone />
       </section>
@@ -2552,36 +2443,6 @@ const HomePage = () => {
             </Col>
           </Row>
           <Row>
-            <Col xl={6}>
-              <div className="key_blocks">
-                <h4 className="fs-32px gren_title fw-400">Price discovery</h4>
-                <p className="fs-18 fw-300 text-white">
-                  The price of the token starts high and drops based on a
-                  pre-configured price decay curve that can be resisted by
-                  buying pressure from LBP participants. Anyone can buy into or
-                  sell out of the LBP freely at any time, so price truly
-                  regulates itself. Open and permissionless participation. No
-                  whitelists, hard caps, or listing requirements. There is no
-                  minimum or maximum allocation. LBP participants choose how
-                  much they want to buy.
-                </p>
-              </div>
-            </Col>
-            <Col xl={6}>
-              <div className="key_blocks">
-                <h4 className="fs-32px gren_title fw-400">Fair distribution</h4>
-                <p className="fs-18 fw-300 text-white">
-                  The price of the token starts high and drops based on a
-                  pre-configured price decay curve that can be resisted by
-                  buying pressure from LBP participants. Anyone can buy into or
-                  sell out of the LBP freely at any time, so price truly
-                  regulates itself. Open and permissionless participation. No
-                  whitelists, hard caps, or listing requirements. There is no
-                  minimum or maximum allocation. LBP participants choose how
-                  much they want to buy.
-                </p>
-              </div>
-            </Col>
             <Col xl={12}>
               <div className="key_blocks">
                 <h4 className="fs-32px gren_title fw-400">
@@ -2607,14 +2468,19 @@ const HomePage = () => {
           <Row className="justify-content-center">
             <Col xl={5}>
               <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2">
-                The Most Trusted Tokenomics Wallet
+                Tokenomics
               </h2>
-              <p className="fs-18px  fw-300 text-white">
-                Starlight is built on top of Gnosis Safe technology, the most
-                secure and trusted non-custodial wallet in the Ethereum
-                ecosystem. You–and only you–will have access to your wallet and
-                funds.
-              </p>
+              <Row>
+                <Col xl={12}>
+                  <div className="key_blocks">
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />72% IDO</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />10% Team – locked for 1 year, then linear vesting over 12 months.</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />6% Marketing</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />12% Treasury</p>
+
+                  </div>
+                </Col>
+              </Row>
             </Col>
             <Col xl={5} className="text-center">
               <Slider {...settings} className="vslider">
@@ -2803,11 +2669,11 @@ const HomePage = () => {
             <Col xl={4} className=" listing_checkbox_right">
               <div className="key_blocks text-white">
 
-                <p className="fw-300 fs-xl-18px "><img src={greenright} />Initial LBP on Copper Launch</p>
-                <p><img src={greenright} />DEX listing</p>
+                <p className="fw-300 fs-xl-18px "><img src={greenright} />Purchase of first DAO blue Chip NFT assets</p>
+                <p><img src={greenright} />Further deployment of governance mechanisms</p>
                 <p><img src={greenright} />Calibrations start every 24 hours</p>
-                <p><img src={greenright} />Dashboard launch</p>
-                <p><img src={greenright} />DAO voting mechanisms introduced</p>
+                <p><img src={greenright} />Community and marketing development</p>
+                <p><img src={greenright} />Roadmap 2.0 release</p>
               </div>
             </Col>
           </Row>
