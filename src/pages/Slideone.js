@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
+import MutantApe from '../assets/image/Mutant Ape Yaught Club.png'
 import slide_img1 from "../assets/image/slide_img.png";
 import slide_img2 from "../assets/image/slide_img2.png";
 import slide_img3 from "../assets/image/slide_img3.png";
@@ -51,10 +52,9 @@ export default function SimpleSlider() {
     };
     return (
         <Slider {...settings}>
-
             <div className="slide_border ">
-                <img src={image[0]}></img>
-                <p>Boredapeyachtclub</p>
+                <img src={MutantApe}></img>
+                <p>Mutant Ape Yaught Club</p>
             </div>
 
             <div className="slide_border ">
@@ -73,8 +73,8 @@ export default function SimpleSlider() {
             </div>
 
             <div className="slide_border ">
-                <img src={image[4]}></img>
-                <p>Oxmayc-official</p>
+                <img src={image[0]}></img>
+                <p>Bored Ape Yaught Club</p>
             </div>
 
             <div className="slide_border ">
