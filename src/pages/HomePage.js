@@ -2280,7 +2280,7 @@ const HomePage = () => {
   //slider
   var settings = {
     dots: false,
-    speed: 500,
+    speed: 0,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -2300,7 +2300,7 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI &amp; NFT worlds into a single token</p>
+                <p>A DAO to merge the DEFI &amp; NFT worlds into a single token.</p>
                 {/*<NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
   </Button></NavLink>*/}
@@ -2364,7 +2364,7 @@ const HomePage = () => {
           <Row className=" d-flex justify-content-center">
             <Col xl={6}>
               <h2 className="gren_title fs-xl-55px fl-lg-30 fs-md-30px fw-700 pb-2 text-center ">
-                How does it Work? Introducing Calibrations?
+                How does it Work? Introducing Calibrations
               </h2>
             </Col>
           </Row>
@@ -2391,9 +2391,9 @@ const HomePage = () => {
                     <p className="fw-400 fs-xl-32px fs-lg-30px fs-sm-20px  fs-md-20px text-white">
                       Too many DAOs and protocols are negatively impacted by
                       VCs and other private sale buyers purchasing tokens at low prices
-                      and then using DEX liquidity to exit. with NFT TrackDAO,
-                      there is just one sale with the same entry point for all
-                      investors.
+                      and then using Dex liquidity to exit.
+                      With NFT TrackDAO, there is only one sale with the same entry point
+                      for all participants.
                     </p>
                   </div>
                 </Col>
@@ -2429,7 +2429,7 @@ const HomePage = () => {
           <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 text-center">
             Key Features
           </h2>
-          <Row className="d-flex justify-content-center">
+          {/*<Row className="d-flex justify-content-center">
             <Col xl={7}>
               <div>
                 <p className="fs-18px fw-300 text-white">
@@ -2441,7 +2441,7 @@ const HomePage = () => {
                 </p>
               </div>
             </Col>
-          </Row>
+</Row>*/}
           <Row>
             <Col xl={12}>
               <div className="key_blocks">
@@ -2451,12 +2451,28 @@ const HomePage = () => {
                 <p className="fs-18 fw-300 text-white">
                   The price of the token starts high and drops based on a
                   pre-configured price decay curve that can be resisted by
-                  buying pressure from LBP participants. Anyone can buy into or
+                  buying pressure from Liquidity Bootstrapping Pool (LBP) participants.
+                  Anyone can buy into or
                   sell out of the LBP freely at any time, so price truly
                   regulates itself. Open and permissionless participation. No
                   whitelists, hard caps, or listing requirements. There is no
                   minimum or maximum allocation. LBP participants choose how
                   much they want to buy.
+                </p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xl={12}>
+              <div className="key_blocks">
+                <h4 className="fs-32px gren_title fw-400">
+                  Community First
+                </h4>
+                <p className="fs-18 fw-300 text-white">
+                  We believe actions speak louder than words.
+                  This is why, to show our commitment to the community,
+                  the team will be keeping ZERO funds from the initial sale of $TRACK.
+                  100% of all funds raised will go towards seeding the DAO and providing Uniswap liquidity.
                 </p>
               </div>
             </Col>
@@ -2473,10 +2489,10 @@ const HomePage = () => {
               <Row>
                 <Col xl={12}>
                   <div className="key_blocks">
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />72% IDO</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />10% Team – locked for 1 year, then linear vesting over 12 months.</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />6% Marketing</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />12% Treasury</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   72% IDO</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   10% Team – locked for 1 year, then linear vesting over 12 months.</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   6% Marketing</p>
+                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   12% Treasury</p>
 
                   </div>
                 </Col>
@@ -2489,7 +2505,7 @@ const HomePage = () => {
                     <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white text-center">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
-                    Initial supply
+                    Initial Supply
                   </p>
                 </div>
                 <div className="py-5 my-5">
@@ -2497,7 +2513,7 @@ const HomePage = () => {
                     <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
-                    Initial supply
+                    Initial Supply
                   </p>
                 </div>
                 <div className="py-5 my-5">
@@ -2505,7 +2521,7 @@ const HomePage = () => {
                     <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
-                    Initial supply
+                    Initial Supply
                   </p>
                 </div>
                 <div className="py-5 my-5">
@@ -2513,7 +2529,7 @@ const HomePage = () => {
                     <p className="fs-xl-55px fs-lg-35px fs-sm-20px fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
-                    Initial supply
+                    Initial Supply
                   </p>
                 </div>
                 <div className="py-5 my-5">
@@ -2521,7 +2537,7 @@ const HomePage = () => {
                     <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
-                    Initial supply
+                    Initial Supply
                   </p>
                 </div>
               </Slider>
@@ -2529,7 +2545,7 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
-      <section className="nft_dao">
+      {/* <section className="nft_dao">
         <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-5 text-center">
           NFT TRACK DAO
         </h2>
@@ -2548,7 +2564,7 @@ const HomePage = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+</section>*/}
       <section className="our-team">
         <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 text-center">OUR TEAM</h2>
         <Container>
@@ -2659,21 +2675,21 @@ const HomePage = () => {
             <Col xl={4} className=" listing_checkbox_left">
               <div className="key_blocks text-white">
 
-                <p className="fw-300 fs-xl-18px "><img src={greenright} />Initial LBP on Copper Launch</p>
-                <p><img src={greenright} />DEX listing</p>
-                <p><img src={greenright} />Calibrations start every 24 hours</p>
-                <p><img src={greenright} />Dashboard launch</p>
-                <p><img src={greenright} />DAO voting mechanisms introduced</p>
+                <p className="fw-300 fs-xl-18px "><img src={greenright} />  Initial LBP on Copper Launch</p>
+                <p><img src={greenright} />  DEX listing</p>
+                <p><img src={greenright} />  Calibrations start every 24 hours</p>
+                <p><img src={greenright} />  Dashboard launch</p>
+                <p><img src={greenright} />  DAO voting mechanisms introduced</p>
               </div>
             </Col>
             <Col xl={4} className=" listing_checkbox_right">
               <div className="key_blocks text-white">
 
-                <p className="fw-300 fs-xl-18px "><img src={greenright} />Purchase of first DAO blue Chip NFT assets</p>
-                <p><img src={greenright} />Further deployment of governance mechanisms</p>
-                <p><img src={greenright} />Calibrations start every 24 hours</p>
-                <p><img src={greenright} />Community and marketing development</p>
-                <p><img src={greenright} />Roadmap 2.0 release</p>
+                <p className="fw-300 fs-xl-18px "><img src={greenright} />  Purchase of first DAO blue Chip NFT assets</p>
+                <p><img src={greenright} />  Further deployment of governance mechanisms</p>
+                <p><img src={greenright} />  Calibrations start every 24 hours</p>
+                <p><img src={greenright} />  Community and marketing development</p>
+                <p><img src={greenright} />  Roadmap 2.0 release</p>
               </div>
             </Col>
           </Row>

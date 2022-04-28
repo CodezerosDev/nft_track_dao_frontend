@@ -45,7 +45,7 @@ export default function Introlside() {
           <p className="fs-16px fs-md-14px text-white fw-300">
             The current total floor price of the Blue Chip NFT index is 236 ETH (4/03/2022).
             Let us assume that this remains the same until DEX launch.
-            This 236 ETH represents the base price from which to which to match to the initial launch price of $TRACK (in our assumptions, $1.00)
+            This 236 ETH represents the base price from which to match to the initial launch price of $TRACK. (in our assumptions, $1.00)
           </p>
         </div>
         <div className="intro_cali_content panel ">
