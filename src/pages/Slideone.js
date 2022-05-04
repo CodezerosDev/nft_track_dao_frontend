@@ -7,6 +7,10 @@ import slide_img1 from "../assets/image/slide_img.png";
 import slide_img2 from "../assets/image/slide_img2.png";
 import slide_img3 from "../assets/image/slide_img3.png";
 import slide_img4 from "../assets/image/slide_img4.png";
+import Meebits from "../assets/image/Meebits.jpg"
+import clonex from "../assets/image/clonex.jpg"
+import womenImg from "../assets/image/women.jpg"
+import doodlesImg from "../assets/image/doodles.jpg"
 
 export default function SimpleSlider() {
 
@@ -54,16 +58,16 @@ export default function SimpleSlider() {
         <Slider {...settings}>
             <div className="slide_border ">
                 <img src={MutantApe}></img>
-                <p>Mutant Ape Yaught Club</p>
+                <p>Mutant Ape Yacht Club</p>
             </div>
 
             <div className="slide_border ">
-                <img src={image[1]}></img>
-                <p>Invisiblefriends</p>
+                <img src={Meebits}></img>
+                <p>Meebits</p>
             </div>
 
             <div className="slide_border">
-                <img src={image[2]}></img>
+                <img src={clonex}></img>
                 <p>CloneX</p>
             </div>
 
@@ -74,11 +78,11 @@ export default function SimpleSlider() {
 
             <div className="slide_border ">
                 <img src={image[0]}></img>
-                <p>Bored Ape Yaught Club</p>
+                <p>Bored Ape Yacht Club</p>
             </div>
 
             <div className="slide_border ">
-                <img src={image[5]}></img>
+                <img src={doodlesImg}></img>
                 <p>Doodles-official</p>
             </div>
 
@@ -88,7 +92,7 @@ export default function SimpleSlider() {
             </div>
 
             <div className="slide_border">
-                <img src={image[8]}></img>
+                <img src={womenImg}></img>
                 <p>World-of-women-nft</p>
             </div>
 
