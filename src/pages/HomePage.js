@@ -22,6 +22,7 @@ import Slider from "react-slick/lib/slider";
 const HomePage = () => {
   //onscroll 2 line animation
   const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
@@ -30,6 +31,13 @@ const HomePage = () => {
   //onscroll 2 parallax animation
   const imgRef = useRef(null);
   const imgMoveRef = useRef(null);
+  const what_is_$track = useRef(null);
+
+  const scrollToElement = () => {
+    console.log("hwllo");
+    what_is_$track.current.scrollIntoView();
+  }
+
   const parallax = (e) => {
     const x = (window.innerWidth - e.pageX) / 90;
     const y = (window.innerHeight - e.pageY) / 90;
@@ -2323,11 +2331,11 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      <section className="what_track text-center sale_will_take">
+      <section className="what_track text-center sale_will_take" id="what_is_$track">
         <Container>
-          <div className="sale_will_banner text-center ">
+          <div className="sale_will_banner text-center" >
             <img src={sale_willbanner}></img>
-            <div className="ovelay_dark">
+            <div className="ovelay_dark" >
               <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 ">
                 What is $TRACK?
               </h2>
@@ -2360,10 +2368,10 @@ const HomePage = () => {
         <Slideone />
       </section>
       <section className="how_does_work">
-        <Container>
+        <Container id="secondStep">
           <Row className=" d-flex justify-content-center">
             <Col xl={6}>
-              <h2 className="gren_title fs-xl-55px fl-lg-30 fs-md-30px fw-700 pb-2 text-center ">
+              <h2 className="gren_title fs-xl-55px fl-lg-30 fs-md-30px fw-700 pb-2 text-center">
                 How does it Work? Introducing Calibrations
               </h2>
             </Col>
@@ -2372,7 +2380,7 @@ const HomePage = () => {
         <Introslides />
       </section>
       <section className="coin_shadow">
-        <div className="public_fair_launch" ref={imgMoveRef}>
+        <div className="public_fair_launch" ref={imgMoveRef} id="fair_public_launch">
           <img src={coins} alt="" ref={imgRef} className="w-100 moveImg" />
           <div className="coins_inner_content">
             <Container>
@@ -2454,8 +2462,8 @@ const HomePage = () => {
                   buying pressure from Liquidity Bootstrapping Pool (LBP) participants.
                   Anyone can buy into or
                   sell out of the LBP freely at any time, so price truly
-                  regulates itself. Open and permissionless participation. No
-                  whitelists, hard caps, or listing requirements. There is no
+                  regulates itself through open and permissionless participation.
+                  No whitelists, hard caps, or listing requirements. There is no
                   minimum or maximum allocation. LBP participants choose how
                   much they want to buy.
                 </p>
@@ -2479,7 +2487,7 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
-      <section className="most_trusted" >
+      <section className="most_trusted" id="Tokenomics">
         <Container>
           <Row className="justify-content-center">
             <Col xl={5}>
@@ -2572,7 +2580,7 @@ const HomePage = () => {
             <div className="col-xl-7 text-center">
               <div>
                 <p className="fs-18px fw-300 text-white mb-5">
-                  We believe that about 90% of success depends on people.And it seems that the time has come to present ourselves personally.
+                  We believe that about 90% of success depends on people, and it seems that the time has come to present ourselves personally.
                 </p>
               </div>
             </div>
@@ -2687,7 +2695,6 @@ const HomePage = () => {
 
                 <p className="fw-300 fs-xl-18px "><img src={greenright} />  Purchase of first DAO blue Chip NFT assets</p>
                 <p><img src={greenright} />  Further deployment of governance mechanisms</p>
-                <p><img src={greenright} />  Calibrations start every 24 hours</p>
                 <p><img src={greenright} />  Community and marketing development</p>
                 <p><img src={greenright} />  Roadmap 2.0 release</p>
               </div>
@@ -2699,4 +2706,5 @@ const HomePage = () => {
     </>
   );
 };
+
 export default HomePage;
