@@ -24,55 +24,55 @@ export default function BasicMenu() {
     // const scrollToElement = () => {
     //     console.log("hello");
     // }
-    const scrollToWhatIs$Track = () => {
-        const element = document.getElementById('what_is_$track');
-        if (element) {
-            window.scroll({
-                top: element.scrollHeight,
-                behavior: 'smooth',
-            })
-        }
-    }
-    const scrollToHowItWorks = () => {
-        const element = document.getElementById('secondStep');
-        console.log("element", element.scrollHeight);
-        if (element) {
-            window.scroll({
-                top: element.scrollHeight,
-                behavior: 'smooth',
-            })
-        }
-    }
-    const scrollToFairPublicLaunch = () => {
-        const element = document.getElementById('fair_public_launch');
-        console.log("element", element.scrollHeight);
-        if (element) {
-            window.scroll({
-                top: element.scrollHeight,
-                behavior: 'smooth',
-            })
-        }
-    }
-    const scrollToTokenomics = () => {
-        const element = document.getElementById('Tokenomics');
-        console.log("element", element.scrollHeight);
-        if (element) {
-            window.scroll({
-                top: element.scrollHeight,
-                behavior: 'smooth',
-            })
-        }
-    }
-    const scrollToTeam = () => {
-        const element = document.getElementById('team');
-        console.log("element", element.scrollHeight);
-        if (element) {
-            window.scroll({
-                top: element.scrollHeight,
-                behavior: 'smooth',
-            })
-        }
-    }
+    // const scrollToWhatIs$Track = () => {
+    //     const element = document.getElementById('what_is_$track');
+    //     if (element) {
+    //         window.scroll({
+    //             top: element.scrollHeight,
+    //             behavior: 'smooth',
+    //         })
+    //     }
+    // }
+    // const scrollToHowItWorks = () => {
+    //     const element = document.getElementById('secondStep');
+    //     console.log("element", element.scrollHeight);
+    //     if (element) {
+    //         window.scroll({
+    //             top: element.scrollHeight,
+    //             behavior: 'smooth',
+    //         })
+    //     }
+    // }
+    // const scrollToFairPublicLaunch = () => {
+    //     const element = document.getElementById('fair_public_launch');
+    //     console.log("element", element.scrollHeight);
+    //     if (element) {
+    //         window.scroll({
+    //             top: element.scrollHeight,
+    //             behavior: 'smooth',
+    //         })
+    //     }
+    // }
+    // const scrollToTokenomics = () => {
+    //     const element = document.getElementById('Tokenomics');
+    //     console.log("element", element.scrollHeight);
+    //     if (element) {
+    //         window.scroll({
+    //             top: element.scrollHeight,
+    //             behavior: 'smooth',
+    //         })
+    //     }
+    // }
+    // const scrollToTeam = () => {
+    //     const element = document.getElementById('team');
+    //     console.log("element", element.scrollHeight);
+    //     if (element) {
+    //         window.scroll({
+    //             top: element.scrollHeight,
+    //             behavior: 'smooth',
+    //         })
+    //     }
+    // }
     const scrollToRoadmap = () => {
         const element = document.getElementById('roadMap');
         console.log("element", element.scrollHeight);
@@ -103,6 +103,32 @@ export default function BasicMenu() {
                                 <Nav.Item className="py-2">
                                     <Nav.Link href="/DashboardPage">Dashboard</Nav.Link>
                                 </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#what_is_track" >What is $TRACK</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#secondStep" >How It Works</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#fair_public_launch" >Fair Public Launch</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#Tokenomics" >Tokenomics</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#team" >Team</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#roadmap" >Roadmap</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                            {/* <Nav className="d-block mt-4">
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="/">Home</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="/DashboardPage">Dashboard</Nav.Link>
+                                </Nav.Item>
                                 <Nav.Item className="py-2" onClick={scrollToWhatIs$Track}>
                                     <Nav.Link href="" >What is $TRACK</Nav.Link>
                                 </Nav.Item>
@@ -121,7 +147,7 @@ export default function BasicMenu() {
                                 <Nav.Item className="py-2" onClick={scrollToRoadmap}>
                                     <Nav.Link href="" >Roadmap</Nav.Link>
                                 </Nav.Item>
-                            </Nav>
+                            </Nav> */}
                         </div>
                     </>
                 ) : null}

@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Introlside() {
+
   const animation = () => {
     gsap.registerPlugin(ScrollTrigger);
     var container = document.getElementById("scrollContainer");
@@ -25,7 +26,9 @@ export default function Introlside() {
     })
   };
   useEffect(() => {
+    if (window.matchMedia("screen and (min-width: 768px)").matches) {
     animation();
+    }
   });
 
   return (

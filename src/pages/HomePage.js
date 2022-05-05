@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
+// import { NavLink } from "react-router-dom";
+
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Slideone from "../pages/Slideone.js";
 import Introslides from "../pages/IntroSlides.js";
 // import logobox from "../assets/image/lg_logo_box.svg";
 import logoanimate from "../assets/image/lg_logo.svg";
-import arrowdropup from "../assets/image/arrow_drop_up.svg";
-import arrowdropdown from "../assets/image/arrow_drop_down.svg";
+// import arrowdropup from "../assets/image/arrow_drop_up.svg";
+// import arrowdropdown from "../assets/image/arrow_drop_down.svg";
 import arrowdownlg from "../assets/image/arrow_down_lg.svg";
 import pub_logo from "../assets/image/pub_logo.png";
 import sale_willbanner from "../assets/image/sale_willbanner.png";
@@ -19,6 +20,111 @@ import team_one_img from "../assets/image/team_one.png";
 import hrlinelogo from "../assets/image/hrlinelogo.png";
 import greenright from "../assets/image/green_right.svg";
 import Slider from "react-slick/lib/slider";
+
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+export const datamain = {
+  labels: [
+    "Airdrop",
+    "Marketing",
+    "Liquidity Provision",
+    "Founding Team",
+    "Treasury",
+    "IDO",
+  ],
+  datasets: [
+    {
+      // label: [""],
+      data: [5, 6, 9, 10, 12, 58],
+      backgroundColor: [
+        "rgba(255, 99, 132, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(239, 139, 44, 1)",
+        "rgba(153, 102, 255, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(97, 225, 182, 1)",
+      ],
+      borderWidth: 0,
+      cutout: 40,
+    },
+  ],
+};
+export const data1 = {
+  labels: ["Airdrop", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [5, 95],
+      backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+export const data2 = {
+  labels: ["Marketing", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [6, 94],
+      backgroundColor: ["rgba(255, 206, 86, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+export const data3 = {
+  labels: ["Liquidity Provision", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [9, 91],
+      backgroundColor: ["rgba(239, 139, 44, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+export const data4 = {
+  labels: ["Founding Team", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [10, 90],
+      backgroundColor: ["rgba(153, 102, 255, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+export const data5 = {
+  labels: ["Treasury", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [12, 88],
+      backgroundColor: ["rgba(54, 162, 235, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+export const data6 = {
+  labels: ["IDO", ""],
+  datasets: [
+    {
+      // label: [""],
+      data: [58, 42],
+      backgroundColor: ["rgba(97, 225, 182, 1)", "rgba(70, 73, 78, 1)"],
+      borderWidth: 0,
+      cutout: 22,
+    },
+  ],
+};
+
 const HomePage = () => {
   //onscroll 2 line animation
   const [scroll, setScroll] = useState(false);
@@ -31,12 +137,6 @@ const HomePage = () => {
   //onscroll 2 parallax animation
   const imgRef = useRef(null);
   const imgMoveRef = useRef(null);
-  const what_is_$track = useRef(null);
-
-  const scrollToElement = () => {
-    console.log("hwllo");
-    what_is_$track.current.scrollIntoView();
-  }
 
   const parallax = (e) => {
     const x = (window.innerWidth - e.pageX) / 90;
@@ -58,10 +158,10 @@ const HomePage = () => {
     var triggerOffset = document.documentElement.clientHeight / 2;
     var requestId = null;
     if (window.matchMedia("screen and (max-width: 2564px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -2279,7 +2379,6 @@ const HomePage = () => {
         requestId = null;
       }
     }
-
   };
   useEffect(() => {
     logoAnimation();
@@ -2299,8 +2398,8 @@ const HomePage = () => {
   return (
     <>
       <div className="d-none d-xl-block">
-        <img src={logopart1} alt="" id="logopart1" ref={logopart1ref} />
-        <img src={logopart2} alt="" id="logopart2" ref={logopart2ref} />
+        <img src={logopart1} alt="lp1" id="logopart1" ref={logopart1ref} />
+        <img src={logopart2} alt="lp2" id="logopart2" ref={logopart2ref} />
       </div>
       <Container>
         <Row className="align-items-center pt-5">
@@ -2308,7 +2407,9 @@ const HomePage = () => {
             <div className="section_one">
               <div className="track_content">
                 <p>$TRACK</p>
-                <p>A DAO to merge the DEFI &amp; NFT worlds into a single token.</p>
+                <p>
+                  A DAO to merge the DEFI &amp; NFT worlds into a single token.
+                </p>
                 {/*<NavLink to="/DashboardPage"><Button className="fs-22px" size="lg">
                   Dashboard
   </Button></NavLink>*/}
@@ -2331,34 +2432,42 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      <section className="what_track text-center sale_will_take" id="what_is_$track">
+      <section
+        className="what_track text-center sale_will_take"
+        id="what_is_track"
+      >
         <Container>
-          <div className="sale_will_banner text-center" >
-            <img src={sale_willbanner}></img>
-            <div className="ovelay_dark" >
+          <div className="sale_will_banner text-center">
+            <img src={sale_willbanner} alt=""></img>
+            <div className="ovelay_dark">
               <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 ">
                 What is $TRACK?
               </h2>
               <Row className=" d-flex justify-content-center">
                 <Col xl={7}>
                   <p className="fs-18px text-white fw-300">
-                    NFT TrackDAO ($TRACK), built on Ethereum, is a synthetic asset
-                    pegged to the floor prices of the top 10 Blue Chip NFT projects.
-                    As a single entry trading derivative,
-                    $TRACK allows investors to speculate on the Blue Chip NFT
-                    market simultaneously, rather than having to purchase those
-                    assets or select a portfolio. This will be of value to
-                    investors interested in the NFT field, those priced out of
-                    such assets and those who require immediate liquidity on
-                    their investments without requiring a peer-to-peer purchase
+                    NFT TrackDAO ($TRACK), built on Ethereum, is a synthetic
+                    asset pegged to the floor prices of the top 10 Blue Chip NFT
+                    projects. As a single entry trading derivative, $TRACK
+                    allows investors to speculate on the Blue Chip NFT market
+                    simultaneously, rather than having to purchase those assets
+                    or select a portfolio. This will be of value to investors
+                    interested in the NFT field, those priced out of such assets
+                    and those who require immediate liquidity on their
+                    investments without requiring a peer-to-peer purchase
                     arrangement.
                   </p>
                   <p className="fs-18px text-white fw-300">
-                    In addition, a reflection on market sales of 5% will create a fund with which the DAO will be able to buy NFT Blue Chip Protocol assets to create an asset-backed value for $TRACK holders. Each sale will attract a 5% fee, where 4% of the sale of $TRACK to ETH will be sent to the DAO wallet for DAO asset purchases, while the remaining 1% will go towards future development of the project.
+                    In addition, a reflection on market sales of 5% will create
+                    a fund with which the DAO will be able to buy NFT Blue Chip
+                    Protocol assets to create an asset-backed value for $TRACK
+                    holders. Each sale will attract a 5% fee, where 4% of the
+                    sale of $TRACK to ETH will be sent to the DAO wallet for DAO
+                    asset purchases, while the remaining 1% will go towards
+                    future development of the project.
                   </p>
                 </Col>
               </Row>
-
             </div>
           </div>
         </Container>
@@ -2380,27 +2489,31 @@ const HomePage = () => {
         <Introslides />
       </section>
       <section className="coin_shadow">
-        <div className="public_fair_launch" ref={imgMoveRef} id="fair_public_launch">
-          <img src={coins} alt="" ref={imgRef} className="w-100 moveImg" />
+        <div
+          className="public_fair_launch"
+          ref={imgMoveRef}
+          id="fair_public_launch"
+        >
+          <img src={coins} alt="coins" ref={imgRef} className="w-100 moveImg" />
           <div className="coins_inner_content">
             <Container>
               <Row className="justify-content-center">
                 <Col xl={8} className="text-center">
                   <div className="arrowdown bounce">
-                    <img src={arrowdownlg}></img>
+                    <img src={arrowdownlg} alt="fpl-img"></img>
                   </div>
                   <div className="pub_logo  ">
-                    <img src={pub_logo} className=""></img>
+                    <img src={pub_logo} alt="Pub logo"></img>
                   </div>
-                  <div>
+                  <div className="fpl_text">
                     <h2 className="gren_title  fs-xl-55px fs-md-30px fw-700 pb-2 text-center ">
                       Fair Public Launch
                     </h2>
                     <p className="fw-400 fs-xl-32px fs-lg-30px fs-sm-20px  fs-md-20px text-white">
-                      Too many DAOs and protocols are negatively impacted by
-                      VCs and other private sale buyers purchasing tokens at low prices
-                      and then using Dex liquidity to exit.
-                      With NFT TrackDAO, there is only one sale with the same entry point
+                      Too many DAOs and protocols are negatively impacted by VCs
+                      and other private sale buyers purchasing tokens at low
+                      prices and then using Dex liquidity to exit. With NFT
+                      TrackDAO, there is only one sale with the same entry point
                       for all participants.
                     </p>
                   </div>
@@ -2413,7 +2526,7 @@ const HomePage = () => {
       <section className="sale_will_take">
         <Container>
           <div className="sale_will_banner text-center">
-            <img src={sale_willbanner}></img>
+            <img src={sale_willbanner} alt="" />
             <div className="ovelay_dark" id="animation_ovelay_dark">
               <h4 className="fs-xl-55px fs-md-30px fw-700 text-white">
                 Our sale will take place on{" "}
@@ -2459,13 +2572,12 @@ const HomePage = () => {
                 <p className="fs-18 fw-300 text-white">
                   The price of the token starts high and drops based on a
                   pre-configured price decay curve that can be resisted by
-                  buying pressure from Liquidity Bootstrapping Pool (LBP) participants.
-                  Anyone can buy into or
-                  sell out of the LBP freely at any time, so price truly
-                  regulates itself through open and permissionless participation.
-                  No whitelists, hard caps, or listing requirements. There is no
-                  minimum or maximum allocation. LBP participants choose how
-                  much they want to buy.
+                  buying pressure from Liquidity Bootstrapping Pool (LBP)
+                  participants. Anyone can buy into or sell out of the LBP
+                  freely at any time, so price truly regulates itself through
+                  open and permissionless participation. No whitelists, hard
+                  caps, or listing requirements. There is no minimum or maximum
+                  allocation. LBP participants choose how much they want to buy.
                 </p>
               </div>
             </Col>
@@ -2473,14 +2585,13 @@ const HomePage = () => {
           <Row>
             <Col xl={12}>
               <div className="key_blocks">
-                <h4 className="fs-32px gren_title fw-400">
-                  Community First
-                </h4>
+                <h4 className="fs-32px gren_title fw-400">Community First</h4>
                 <p className="fs-18 fw-300 text-white">
-                  We believe actions speak louder than words.
-                  This is why, to show our commitment to the community,
-                  the team will be keeping ZERO funds from the initial sale of $TRACK.
-                  100% of all funds raised will go towards seeding the DAO and providing Uniswap liquidity.
+                  We believe actions speak louder than words. This is why, to
+                  show our commitment to the community, the team will be keeping
+                  ZERO funds from the initial sale of $TRACK. 100% of all funds
+                  raised will go towards seeding the DAO and providing Uniswap
+                  liquidity.
                 </p>
               </div>
             </Col>
@@ -2494,15 +2605,158 @@ const HomePage = () => {
               <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2">
                 Tokenomics
               </h2>
-              <Row>
+              {/* <Row>
                 <Col xl={12}>
                   <div className="key_blocks">
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   72% IDO</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   10% Team – locked for 1 year, then linear vesting over 12 months.</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   6% Marketing</p>
-                    <p className="fs-18 fw-300 text-white"><img src={greenright} />   12% Treasury</p>
-
+                    <p className="fs-18 fw-300 text-white">
+                      <img src={greenright} alt="" /> 72% IDO
+                    </p>
+                    <p className="fs-18 fw-300 text-white">
+                      <img src={greenright} alt="" /> 10% Team – locked for 1
+                      year, then linear vesting over 12 months.
+                    </p>
+                    <p className="fs-18 fw-300 text-white">
+                      <img src={greenright} alt="" /> 6% Marketing
+                    </p>
+                    <p className="fs-18 fw-300 text-white">
+                      <img src={greenright} alt="" /> 12% Treasury
+                    </p>
                   </div>
+                </Col>
+              </Row> */}
+              <Row className="align-items-center">
+                <Col sm={3} className="mY-3">
+                  <div className="chart_main">
+                    <Doughnut
+                      data={datamain}
+                      options={{
+                        maintainAspectRatio: true,
+                        plugins: {
+                          legend: {
+                            display: false,
+                          },
+                        },
+                      }}
+                    />
+                  </div>
+                </Col>
+                <Col sm={9}>
+                  <Row>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data1}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_1 lh-sm">
+                        5%
+                        <span className="text-white-50 d-block">Airdrop</span>
+                      </div>
+                    </Col>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data2}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_2 lh-sm">
+                        6%
+                        <span className="text-white-50 d-block">Marketing</span>
+                      </div>
+                    </Col>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data3}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_3 lh-sm">
+                        9%
+                        <span className="text-white-50 d-block">Liquidity Provision</span>
+                      </div>
+                    </Col>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data4}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_4 lh-sm">
+                        10%
+                        <span className="text-white-50 d-block">Founding Team</span>
+                      </div>
+                    </Col>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data5}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_5 lh-sm">
+                        12%
+                        <span className="text-white-50 d-block">Treasury</span>
+                      </div>
+                    </Col>
+                    <Col sm={6} className="d-flex align-items-center my-3">
+                      <div className="chart_block_small me-3">
+                        <Doughnut
+                          data={data6}
+                          options={{
+                            maintainAspectRatio: true,
+                            plugins: {
+                              legend: {
+                                display: false,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                      <div className="chart_text chart_6 lh-sm">
+                        58%
+                        <span className="text-white-50 d-block">IDO</span>
+                      </div>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Col>
@@ -2510,7 +2764,9 @@ const HomePage = () => {
               <Slider {...settings} className="vslider">
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white text-center">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white text-center">
+                      1,000,000
+                    </p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial Supply
@@ -2518,7 +2774,9 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">
+                      1,000,000
+                    </p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial Supply
@@ -2526,7 +2784,9 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">
+                      1,000,000
+                    </p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial Supply
@@ -2534,7 +2794,9 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px fw-700 text-white">
+                      1,000,000
+                    </p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial Supply
@@ -2542,7 +2804,9 @@ const HomePage = () => {
                 </div>
                 <div className="py-5 my-5">
                   <div className="counting_amount">
-                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">1,000,000</p>
+                    <p className="fs-xl-55px fs-lg-35px fs-sm-20px  fw-700 text-white">
+                      1,000,000
+                    </p>
                   </div>
                   <p className="fs-32px  fw-400 text-white mt-3">
                     Initial Supply
@@ -2573,14 +2837,17 @@ const HomePage = () => {
           </Row>
         </Container>
 </section>*/}
-      <section className="our-team">
-        <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 text-center">OUR TEAM</h2>
+      <section className="our-team" id="team">
+        <h2 className="gren_title fs-xl-55px fs-md-30px fw-700 pb-2 text-center">
+          OUR TEAM
+        </h2>
         <Container>
           <div className="d-flex justify-content-center row">
             <div className="col-xl-7 text-center">
               <div>
                 <p className="fs-18px fw-300 text-white mb-5">
-                  We believe that about 90% of success depends on people, and it seems that the time has come to present ourselves personally.
+                  We believe that about 90% of success depends on people, and it
+                  seems that the time has come to present ourselves personally.
                 </p>
               </div>
             </div>
@@ -2590,20 +2857,35 @@ const HomePage = () => {
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
                   <div className=" team_member_info">
-                    <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
+                    <img
+                      src={team_one_img}
+                      alt="slide_img1"
+                      className="img-fluid mb-2"
+                    />
+                    <h4 className="fs-32px gren_title fw-400 pt-3">
+                      Kenny Sandulak
+                    </h4>
+                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
+                      Community Management
+                    </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">Kenny Sandulak</div>
+                    <div className="fs-lg-45px fw-700  gren_title mb-3">
+                      Kenny Sandulak
+                    </div>
                     <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services.
-                        He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist.
-                        Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid
-                        caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and
-                        started working
-                        in several Telegram and Discord community chats. Because of his
-                        extensive counselling experience, he isn’t your average mod!</p>
+                      <p className="text-center px-4">
+                        Kenny graduated from Sprott-Shaw College in Vancouver,
+                        Canada, in Social Services. He is a Canadian Certified
+                        Addiction Counsellor and certified Substance Abuse
+                        Therapist. Until Covid in April 2020, Ken worked in
+                        mental health and with at-risk youth. When Covid caused
+                        the inability to meet clients, Ken decided to
+                        concentrate on his long term love of crypto and started
+                        working in several Telegram and Discord community chats.
+                        Because of his extensive counselling experience, he
+                        isn’t your average mod!
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -2611,20 +2893,35 @@ const HomePage = () => {
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
                   <div className=" team_member_info">
-                    <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
+                    <img
+                      src={team_one_img}
+                      alt="slide_img1"
+                      className="img-fluid mb-2"
+                    />
+                    <h4 className="fs-32px gren_title fw-400 pt-3">
+                      Kenny Sandulak
+                    </h4>
+                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
+                      Community Management
+                    </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">Kenny Sandulak</div>
+                    <div className="fs-lg-45px fw-700  gren_title mb-3">
+                      Kenny Sandulak
+                    </div>
                     <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services.
-                        He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist.
-                        Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid
-                        caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and
-                        started working
-                        in several Telegram and Discord community chats. Because of his
-                        extensive counselling experience, he isn’t your average mod!</p>
+                      <p className="text-center px-4">
+                        Kenny graduated from Sprott-Shaw College in Vancouver,
+                        Canada, in Social Services. He is a Canadian Certified
+                        Addiction Counsellor and certified Substance Abuse
+                        Therapist. Until Covid in April 2020, Ken worked in
+                        mental health and with at-risk youth. When Covid caused
+                        the inability to meet clients, Ken decided to
+                        concentrate on his long term love of crypto and started
+                        working in several Telegram and Discord community chats.
+                        Because of his extensive counselling experience, he
+                        isn’t your average mod!
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -2632,47 +2929,55 @@ const HomePage = () => {
               <Col xl={4} col={12}>
                 <div className="bluechip_img img-border-box">
                   <div className=" team_member_info">
-                    <img src={team_one_img} alt="slide_img1" className="img-fluid mb-2" />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">Kenny Sandulak</h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">Community Management</div>
+                    <img
+                      src={team_one_img}
+                      alt="slide_img1"
+                      className="img-fluid mb-2"
+                    />
+                    <h4 className="fs-32px gren_title fw-400 pt-3">
+                      Kenny Sandulak
+                    </h4>
+                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
+                      Community Management
+                    </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">Kenny Sandulak</div>
+                    <div className="fs-lg-45px fw-700  gren_title mb-3">
+                      Kenny Sandulak
+                    </div>
                     <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services.
-                        He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist.
-                        Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid
-                        caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and
-                        started working
-                        in several Telegram and Discord community chats. Because of his
-                        extensive counselling experience, he isn’t your average mod!</p>
+                      <p className="text-center px-4">
+                        Kenny graduated from Sprott-Shaw College in Vancouver,
+                        Canada, in Social Services. He is a Canadian Certified
+                        Addiction Counsellor and certified Substance Abuse
+                        Therapist. Until Covid in April 2020, Ken worked in
+                        mental health and with at-risk youth. When Covid caused
+                        the inability to meet clients, Ken decided to
+                        concentrate on his long term love of crypto and started
+                        working in several Telegram and Discord community chats.
+                        Because of his extensive counselling experience, he
+                        isn’t your average mod!
+                      </p>
                     </div>
                   </div>
                 </div>
               </Col>
             </Row>
           </div>
-
         </Container>
       </section>
-      <section className="hr_line_logo">
-
+      <section className="hr_line_logo" id="roadmap">
         <div className="hr_line">
           <div className="container">
             <Row className="justify-content-around ">
               <div className="col-xl-6 col-lg-4 col text-center hr_line_left">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">
-                  Q2 2022
-                </div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q2 2022</div>
               </div>
               <div className="col-xl-6 col-lg-4 col  hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">
-                  Q3 2022
-                </div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q3 2022</div>
               </div>
-
             </Row>
           </div>
         </div>
@@ -2682,27 +2987,47 @@ const HomePage = () => {
           <Row className="justify-content-center">
             <Col xl={4} className=" listing_checkbox_left">
               <div className="key_blocks text-white">
-
-                <p className="fw-300 fs-xl-18px "><img src={greenright} />  Initial LBP on Copper Launch</p>
-                <p><img src={greenright} />  DEX listing</p>
-                <p><img src={greenright} />  Calibrations start every 24 hours</p>
-                <p><img src={greenright} />  Dashboard launch</p>
-                <p><img src={greenright} />  DAO voting mechanisms introduced</p>
+                <p className="fw-300 fs-xl-18px ">
+                  <img src={greenright} alt="" /> Initial LBP on Copper Launch
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> DEX listing
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> Calibrations start every 24
+                  hours
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> Dashboard launch
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> DAO voting mechanisms
+                  introduced
+                </p>
               </div>
             </Col>
             <Col xl={4} className=" listing_checkbox_right">
               <div className="key_blocks text-white">
-
-                <p className="fw-300 fs-xl-18px "><img src={greenright} />  Purchase of first DAO blue Chip NFT assets</p>
-                <p><img src={greenright} />  Further deployment of governance mechanisms</p>
-                <p><img src={greenright} />  Community and marketing development</p>
-                <p><img src={greenright} />  Roadmap 2.0 release</p>
+                <p className="fw-300 fs-xl-18px ">
+                  <img src={greenright} alt="" /> Purchase of first DAO blue
+                  Chip NFT assets
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> Further deployment of
+                  governance mechanisms
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> Community and marketing
+                  development
+                </p>
+                <p>
+                  <img src={greenright} alt="" /> Roadmap 2.0 release
+                </p>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
-
     </>
   );
 };

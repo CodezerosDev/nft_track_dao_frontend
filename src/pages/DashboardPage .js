@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useRef, useState } from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import { Col, Container, Row  } from "react-bootstrap";
 import infoimg from "../assets/image/info.svg";
-import slide_img1 from "../assets/image/slide_img.png";
+// import slide_img1 from "../assets/image/slide_img.png";
 import red_caret_up from "../assets/image/red_caret_up.png";
 import Chartone from "../pages/ChartOne.js";
 import ChartTwo from "../pages/ChartTwo.js";
@@ -11,7 +11,7 @@ import { poolMethods } from '../web3/functions/factory'
 import axios from 'axios';
 import moment from 'moment';
 import { getAllTrack, addTrack } from '../action/api'
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const DashboardPage = () => {
   const { networkDetails, handleConnect, loading, setLoading } = useContext(Web3Context)
