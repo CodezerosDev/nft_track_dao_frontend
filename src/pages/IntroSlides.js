@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Introlside() {
+
   const animation = () => {
     gsap.registerPlugin(ScrollTrigger);
     var container = document.getElementById("scrollContainer");
@@ -25,7 +26,9 @@ export default function Introlside() {
     })
   };
   useEffect(() => {
+    if (window.matchMedia("screen and (min-width: 768px)").matches) {
     animation();
+    }
   });
 
   return (
@@ -59,7 +62,7 @@ export default function Introlside() {
         <div className="intro_cali_content panel ">
           <span className="fs-32px text-white">04</span>
           <p className="fs-16px fs-md-14px text-white fw-300">
-            If the total value of the 10 Blue Chip Project's Floor increases to 472 ETH,
+            If the total value of the 10 Blue Chip project's floor price increases to 472 ETH,
             the target price of $TRACK will be $2.00. In this instance,
             the supply of $TRACK is recalibrated via Uniswap liquidity pools to reach this target price.
             $TRACK allows investors to speculate on the NFT field with one token.

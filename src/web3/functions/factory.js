@@ -2,7 +2,7 @@ import { enviornment } from "../../constants/constants";
 // import { addPackageAsync } from '../../modules/createnewproject/createProjectRedux/createProject.api';
 
 // import { createInvestmentOnChainAsync, getProjectByIdAsync, offerStatusChangeByInvestorAsync, statusChangeByProjectCreatorAsync } from "../../modules/product/productRedux/product.api";
-import { launchSaleAsync } from "../web3Redux/web3.api";
+// import { launchSaleAsync } from "../web3Redux/web3.api";
 
 function getFirstInstance(web3) {
     return new Promise(async (resolve, reject) => {
