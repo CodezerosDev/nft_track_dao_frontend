@@ -49,6 +49,10 @@ body {
   min-height: 538px;
   @media only screen and (max-width: 767px) {
     margin-top: 23px;
+    min-height: 360px;
+  }
+  @media only screen and (max-width: 576px) {
+    min-height: 330px;
   }
   &::before {
     content: "";
@@ -71,7 +75,7 @@ body {
   }
 }
 .rotate {
-  animation: rotation 7s infinite linear;
+  animation: rotation 8s infinite linear;
 }
 @keyframes rotation {
   from {
@@ -184,7 +188,7 @@ section.what_track {
       background-repeat: no-repeat;
       filter: blur(5px);
       left: -109px;
-      z-index: -5;
+      // z-index: -5;
       top: -122px;
     }
     .ovelay_dark {
@@ -194,10 +198,13 @@ section.what_track {
       -webkit-backdrop-filter: blur(37px);
       height: 800px;
       position: absolute;
+      @media only screen and (max-width: 767px) {
+        padding: 45px 40px 35px 40px;
+        height: auto;
+      }
       @media only screen and (max-width: 576px) {
-        padding: 0px;
-        height: 50vh;
-        overflow: auto;
+        padding: 25px 25px 20px 25px;
+        
       }
     }
   }
@@ -254,6 +261,13 @@ section.slider_one {
       text-align: center;
       font-size: 32px;
       font-weight: 700;
+      @media only screen and (max-width: 1199px) {
+        font-size: 28px;
+        line-height: 1.2;
+       }
+      @media only screen and (max-width: 767px) {
+        font-size: 24px;
+       }
     }
     &:hover {
       background-color: #8dff26;
@@ -268,13 +282,23 @@ section.slider_one {
 }
 .how_does_work {
   overflow: hidden;
+  @media only screen and (max-width: 767px) {
+   margin-bottom: 50px;
+  }
   .intro_cali {
     display: flex;
     margin-top: 50px;
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+      padding-left: 55px;
+    }
     .intro_cali_content {
       margin: 0 29px;
       position: relative;
       min-width: 16%;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -282,15 +306,43 @@ section.slider_one {
         height: 200px;
         background-color: #8dff26;
         left: -36px;
+        @media only screen and (max-width: 767px) {
+          top: 0;
+          bottom: -20px;
+          height: auto;
+        }
       }
       &:nth-child(1) {
         &::before {
           content: "";
-          display: none;
+          @media only screen and (min-width: 768x) {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(5) {
+        &::before {
+          content: "";
+          @media only screen and (max-width: 767px) {
+            display: none;
+          }
         }
       }
       span {
         position: relative;
+        @media only screen and (max-width: 767px) {
+          position: absolute;
+          left: -60px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.9);
+          font-size: 22px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 1px #8dff26;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -366,6 +418,15 @@ section.slider_one {
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
+    }
+    .fpl_text {
+      position: relative;
+      z-index: 111;
+      @media only screen and (max-width: 1400px) {
+        padding: 15px;
+        background: rgba(10, 15, 26, 0.7);
+      }
     }
   }
 }
@@ -393,7 +454,11 @@ section.slider_one {
       left: 50%;
       z-index: 999999;
       transform: translate(-50%, -50%);
-      padding: 108px 131px 14px 128px;
+      padding: 80px 130px 80px 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       @media only screen and (max-width: 600px) {
         padding: 0px;
       }
@@ -419,9 +484,9 @@ section.slider_one {
     position: relative;
     p {
       background: transparent
-        linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #71ffa7 100%) 0%
+        linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #08ed60 100%) 0%
         0% no-repeat padding-box;
-      background: transparent linear-gradient(283deg, #8dff26 0%, #71ffa7 100%)
+      background: transparent linear-gradient(283deg, #346b04 0%, #47e684 100%)
         0% 0% no-repeat padding-box;
       box-shadow: 0px 0px 30px #71ffa780;
       border-radius: 60px;
@@ -437,6 +502,27 @@ section.slider_one {
       }
     }
   }
+  .chart_main{
+    max-width: 150px;
+  }
+  .chart_block_small{
+    max-width: 60px;
+  }
+  .chart_text{
+    font-size: 24px;
+    font-weight: 600;
+    span{
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &.chart_1{ color:rgba(255, 99, 132, 1);}
+    &.chart_2{ color:rgba(255, 206, 86, 1);}
+    &.chart_3{ color:rgba(239, 139, 44, 1);}
+    &.chart_4{ color:rgba(153, 102, 255, 1);}
+    &.chart_5{ color:rgba(54, 162, 235, 1);}
+    &.chart_6{ color:rgba(118, 199, 199, 1);}
+  }
+
 }
 
 .nft_dao {
@@ -776,9 +862,9 @@ footer {
   margin-left: auto;
   cursor: pointer;
 }
-.socialIcons{
+.socialIcons {
   display: flex;
 }
-.tweeterIcon{
+.tweeterIcon {
   padding-right: 10px;
 }

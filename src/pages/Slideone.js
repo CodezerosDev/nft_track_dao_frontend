@@ -3,10 +3,14 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import MutantApe from '../assets/image/Mutant Ape Yaught Club.png'
-import slide_img1 from "../assets/image/slide_img.png";
-import slide_img2 from "../assets/image/slide_img2.png";
-import slide_img3 from "../assets/image/slide_img3.png";
-import slide_img4 from "../assets/image/slide_img4.png";
+// import slide_img1 from "../assets/image/slide_img.png";
+// import slide_img2 from "../assets/image/slide_img2.png";
+// import slide_img3 from "../assets/image/slide_img3.png";
+// import slide_img4 from "../assets/image/slide_img4.png";
+import Meebits from "../assets/image/Meebits.jpg"
+import clonex from "../assets/image/clonex.jpg"
+import womenImg from "../assets/image/women.jpg"
+import doodlesImg from "../assets/image/doodles.jpg"
 
 export default function SimpleSlider() {
 
@@ -24,10 +28,9 @@ export default function SimpleSlider() {
     ]
     var settings = {
         dots: false,
-        infinite: true,
-        speed: 200,
+        speed: 300,
         arrows: false,
-        slidesToShow: 4,
+        slidesToShow: 8,
         slidesToScroll: 1,
         rtl: true,
         autoplay: false,
@@ -35,17 +38,40 @@ export default function SimpleSlider() {
         mobileFirst: true,//add this one
         responsive: [
             {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 6,
+                    autoplay: true,
+                    speed: 500,
+                    autoplaySpeed: 3000,
+                }
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 4,
+                    autoplay: true,
+                    speed: 500,
+                    autoplaySpeed: 3000,
+                }
+            },
+            {
                 breakpoint: 1200,
                 settings: {
 
-                    slidesToShow: 2
+                    slidesToShow: 3,
+                    autoplay: true,
+                    speed: 500,
+                    autoplaySpeed: 3000,
                 }
             },
             {
                 breakpoint: 575.98,
                 settings: {
-
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    autoplay: true,
+                    speed: 500,
+                    autoplaySpeed: 3000,
                 }
             }
         ]
@@ -53,46 +79,44 @@ export default function SimpleSlider() {
     return (
         <Slider {...settings}>
             <div className="slide_border ">
-                <img src={MutantApe}></img>
-                <p>Mutant Ape Yaught Club</p>
-            </div>
-
-            <div className="slide_border ">
-                <img src={image[1]}></img>
-                <p>Invisiblefriends</p>
+                <img src={MutantApe} alt="img1"></img>
+                <p>Mutant Ape Yacht Club</p>
             </div>
 
             <div className="slide_border">
-                <img src={image[2]}></img>
+                <img src={Meebits} alt="img2"></img>
+                <p>Meebits</p>
+            </div>
+
+            <div className="slide_border">
+                <img src={clonex} alt="img3"></img>
                 <p>CloneX</p>
             </div>
 
             <div className="slide_border">
-                <img src={image[3]}></img>
+                <img src={image[3]} alt="img4"></img>
                 <p>Azuki</p>
             </div>
 
             <div className="slide_border ">
-                <img src={image[0]}></img>
-                <p>Bored Ape Yaught Club</p>
+                <img src={image[0]} alt="img5"></img>
+                <p>Bored Ape Yacht Club</p>
             </div>
 
             <div className="slide_border ">
-                <img src={image[5]}></img>
-                <p>Doodles-official</p>
+                <img src={doodlesImg} alt="img5"></img>
+                <p>Doodles</p>
             </div>
 
             <div className="slide_border">
-                <img src={image[6]}></img>
-                <p>Cool-cats-nft</p>
+                <img src={image[6]} alt="img6"></img>
+                <p>Cool Cats</p>
             </div>
 
             <div className="slide_border">
-                <img src={image[8]}></img>
-                <p>World-of-women-nft</p>
+                <img src={womenImg} alt="img7"></img>
+                <p>World of Women</p>
             </div>
-
-
 
         </Slider>
     );

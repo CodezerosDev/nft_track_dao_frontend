@@ -1,25 +1,11 @@
 import React, { useState } from "react";
-
-// import Menu from '@mui/material/Menu';
-// import MenuItem from '@mui/material/MenuItem';
-// import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink, useNavigate } from "react-router-dom";
 import menuIcon from "../assets/image/hamburger-menu.svg";
 import crossIcon from "../assets/image/crossIcon.svg";
 import { Nav } from "react-bootstrap";
-// import { Button, Dropdown, ButtonGroup } from "react-bootstrap";
-// import SideBar from "./Sidebar";
+
 
 export default function BasicMenu() {
     const [anchorEl, setAnchorEl] = useState(false);
-    // const navigate = useNavigate()
-    // const handleClick = (event) => {
-    //     setAnchorEl(event.currentTarget);
-    // };
-    // const handleDashboard = () => {
-    //     // setAnchorEl(null);
-    //     navigate('/DashboardPage')
-    // };
 
     const handleCloseMenu = () => {
         setAnchorEl(false);
@@ -28,7 +14,6 @@ export default function BasicMenu() {
         setAnchorEl(true);
     };
 
-    console.log("anchorEl", anchorEl);
 
     return (
         <>
@@ -50,31 +35,31 @@ export default function BasicMenu() {
                                 <Nav.Item className="py-2">
                                     <Nav.Link href="/DashboardPage">Dashboard</Nav.Link>
                                 </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#what_is_track" >What is $TRACK</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#secondStep" >How It Works</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#fair_public_launch" >Fair Public Launch</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#Tokenomics" >Tokenomics</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#team" >Team</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="#roadmap" >Roadmap</Nav.Link>
+                                </Nav.Item>
                             </Nav>
+
                         </div>
                     </>
                 ) : null}
             </div>
-            {/*<Dropdown>
-                <Dropdown.Toggle style={{ background: "none" }} className=" btn_no_style nav_toggle" id="dropdown-basic">
 
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                    <Dropdown.Item onClick={handleDashboard} >Dashboard</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>}
-            {/* <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
-            >
-                <MenuItem onClick={handleDashboard}>Dashboard</MenuItem>
-            </Menu> */}
         </>
     );
 }
