@@ -54,7 +54,6 @@ export default function BasicMenu() {
                                     <Nav.Link href="#roadmap" >Roadmap</Nav.Link>
                                 </Nav.Item>
                             </Nav>
-
                         </div>
                     </>
                 ) : null}
