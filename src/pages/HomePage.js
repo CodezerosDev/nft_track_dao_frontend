@@ -310,16 +310,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -508,7 +508,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -526,10 +526,10 @@ const HomePage = () => {
       }
     }
     if (window.matchMedia("screen and (max-width: 1920px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -678,16 +678,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -884,7 +884,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -901,10 +901,10 @@ const HomePage = () => {
       }
     }
     if (window.matchMedia("screen and (max-width: 1680px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -1053,16 +1053,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -1259,7 +1259,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -1276,10 +1276,10 @@ const HomePage = () => {
       }
     }
     if (window.matchMedia("screen and (max-width: 1440px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -1428,16 +1428,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -1635,7 +1635,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -1654,10 +1654,10 @@ const HomePage = () => {
     }
 
     if (window.matchMedia("screen and (max-width: 1366px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -1806,16 +1806,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -1998,7 +1998,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -2017,10 +2017,10 @@ const HomePage = () => {
       }
     }
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
-      gsap.set("#animation_ovelay_dark", {
-        top: 80 + "%",
-        opacity: 0,
-      });
+      // gsap.set("#animation_ovelay_dark", {
+      //   top: 80 + "%",
+      //   opacity: 0,
+      // });
       gsap.set(logopart1ref.current, {
         left: 60 + "%",
         top: 500 + "px",
@@ -2169,16 +2169,16 @@ const HomePage = () => {
           duration: 600,
         })
         .set(logopart1ref.current, { backgroundColor: "transparent" });
-      var t555 = gsap
-        .timeline({ paused: true })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
-        .to("#animation_ovelay_dark", {
-          top: 50 + "%",
-          opacity: 1,
-          ease: "none",
-          duration: 300,
-        })
-        .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
+      // var t555 = gsap
+      //   .timeline({ paused: true })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" }, 4200)
+      //   .to("#animation_ovelay_dark", {
+      //     top: 50 + "%",
+      //     opacity: 1,
+      //     ease: "none",
+      //     duration: 300,
+      //   })
+      //   .set("#animation_ovelay_dark", { backgroundColor: "transparent" });
       //sixth step
       var t6 = gsap
         .timeline({ paused: true })
@@ -2361,7 +2361,7 @@ const HomePage = () => {
         t44.time(window.pageYOffset + triggerOffset);
         t5.time(window.pageYOffset + triggerOffset);
         t55.time(window.pageYOffset + triggerOffset);
-        t555.time(window.pageYOffset + triggerOffset);
+        // t555.time(window.pageYOffset + triggerOffset);
         t6.time(window.pageYOffset + triggerOffset);
         t66.time(window.pageYOffset + triggerOffset);
         t7.time(window.pageYOffset + triggerOffset);
@@ -2899,28 +2899,19 @@ const HomePage = () => {
                       className="img-fluid mb-2"
                     />
                     <h4 className="fs-32px gren_title fw-400 pt-3">
-                      Kenny Sandulak
+                      To be decided
                     </h4>
                     <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
-                      Community Management
+                      To be decided
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-lg-45px fw-700  gren_title mb-3">
-                      Kenny Sandulak
+                      To be decided
                     </div>
                     <div className=" fs-xl-15px fw-300 text-white">
                       <p className="text-center px-4">
-                        Kenny graduated from Sprott-Shaw College in Vancouver,
-                        Canada, in Social Services. He is a Canadian Certified
-                        Addiction Counsellor and certified Substance Abuse
-                        Therapist. Until Covid in April 2020, Ken worked in
-                        mental health and with at-risk youth. When Covid caused
-                        the inability to meet clients, Ken decided to
-                        concentrate on his long term love of crypto and started
-                        working in several Telegram and Discord community chats.
-                        Because of his extensive counselling experience, he
-                        isn’t your average mod!
+                        To be decided
                       </p>
                     </div>
                   </div>
@@ -2935,28 +2926,19 @@ const HomePage = () => {
                       className="img-fluid mb-2"
                     />
                     <h4 className="fs-32px gren_title fw-400 pt-3">
-                      Kenny Sandulak
+                      To be decided
                     </h4>
                     <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
-                      Community Management
+                      To be decided
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-lg-45px fw-700  gren_title mb-3">
-                      Kenny Sandulak
+                      To be decided
                     </div>
                     <div className=" fs-xl-15px fw-300 text-white">
                       <p className="text-center px-4">
-                        Kenny graduated from Sprott-Shaw College in Vancouver,
-                        Canada, in Social Services. He is a Canadian Certified
-                        Addiction Counsellor and certified Substance Abuse
-                        Therapist. Until Covid in April 2020, Ken worked in
-                        mental health and with at-risk youth. When Covid caused
-                        the inability to meet clients, Ken decided to
-                        concentrate on his long term love of crypto and started
-                        working in several Telegram and Discord community chats.
-                        Because of his extensive counselling experience, he
-                        isn’t your average mod!
+                        To be decided
                       </p>
                     </div>
                   </div>

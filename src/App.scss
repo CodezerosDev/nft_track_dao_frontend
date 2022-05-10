@@ -188,7 +188,7 @@ section.what_track {
       background-repeat: no-repeat;
       filter: blur(5px);
       left: -109px;
-      z-index: -5;
+      // z-index: -5;
       top: -122px;
     }
     .ovelay_dark {
@@ -484,9 +484,9 @@ section.slider_one {
     position: relative;
     p {
       background: transparent
-        linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #71ffa7 100%) 0%
+        linear-gradient(283deg, var(--unnamed-color-8dff26) 0%, #08ed60 100%) 0%
         0% no-repeat padding-box;
-      background: transparent linear-gradient(283deg, #8dff26 0%, #71ffa7 100%)
+      background: transparent linear-gradient(283deg, #346b04 0%, #47e684 100%)
         0% 0% no-repeat padding-box;
       box-shadow: 0px 0px 30px #71ffa780;
       border-radius: 60px;

@@ -1,8 +1,8 @@
-import React, { Suspense,useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Spiner } from './component/Spiner';
 import MainRoutes from './routes/MainRoutes';
 import { ToastContainer, toast } from 'react-toastify';
-import {Web3Provider} from './web3/contexts/web3Context'
+import { Web3Provider } from './web3/contexts/web3Context'
 import {
   loadWeb3,
   loadBlockChainData,
@@ -79,7 +79,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    if(localStorage.wallet_name == 'metamask') {
+    if (localStorage.wallet_name === 'metamask') {
       handleConnect()
     }
   }, [])
@@ -99,10 +99,10 @@ const App = () => {
         resetApp,
       }}
     >
-    <Suspense fallback={<Spiner />}>
-      <MainRoutes />
-    </Suspense>
-    <ToastContainer theme="colored" />
+      <Suspense fallback={<Spiner />}>
+        <MainRoutes />
+      </Suspense>
+      <ToastContainer theme="colored" />
     </Web3Provider>
   </>);
 }

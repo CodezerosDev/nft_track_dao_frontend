@@ -28,7 +28,7 @@ export default function SimpleSlider() {
     ]
     var settings = {
         dots: false,
-        speed: 200,
+        speed: 300,
         arrows: false,
         slidesToShow: 8,
         slidesToScroll: 1,
@@ -105,17 +105,17 @@ export default function SimpleSlider() {
 
             <div className="slide_border ">
                 <img src={doodlesImg} alt="img5"></img>
-                <p>Doodles-official</p>
+                <p>Doodles</p>
             </div>
 
             <div className="slide_border">
                 <img src={image[6]} alt="img6"></img>
-                <p>Cool-cats-nft</p>
+                <p>Cool Cats</p>
             </div>
 
             <div className="slide_border">
                 <img src={womenImg} alt="img7"></img>
-                <p>World-of-women-nft</p>
+                <p>World of Women</p>
             </div>
 
         </Slider>

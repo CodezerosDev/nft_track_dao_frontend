@@ -6,7 +6,7 @@ import { enviornment } from "../../constants/constants";
 
 function getFirstInstance(web3) {
     return new Promise(async (resolve, reject) => {
-        if (web3 && web3 != '') {
+        if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
                     enviornment.FirstABI,
@@ -27,7 +27,7 @@ function getFirstInstance(web3) {
 
 function getSecondInstance(web3) {
     return new Promise(async (resolve, reject) => {
-        if (web3 && web3 != '') {
+        if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
                     enviornment.SecondABI,
@@ -48,7 +48,7 @@ function getSecondInstance(web3) {
 
 function getThirdInstance(web3) {
     return new Promise(async (resolve, reject) => {
-        if (web3 && web3 != '') {
+        if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
                     enviornment.ThirdABI,
