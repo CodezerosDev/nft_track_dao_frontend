@@ -109,7 +109,7 @@ $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1170px,
+        xl: 1280px,
         xxl: 1610px,
 );
 @mixin make-max-widths-container-width($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {

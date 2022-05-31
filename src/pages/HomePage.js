@@ -32,24 +32,25 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const datamain = {
   labels: [
+    "Public Sale",
+    "Initial Dex Liquidity ",
+    "Ecosystem Development ",
+    "Team",
     "Airdrop",
-    "Marketing",
-    "Liquidity Provision",
-    "Founding Team",
-    "Treasury",
-    "IDO",
+    // "IDO",
   ],
   datasets: [
     {
       // label: [""],
-      data: [5, 6, 9, 10, 12, 58],
+      // data: [5, 6, 9, 10, 12, 58],
+      data: [470000, 280000, 100000, 100000, 50000],
       backgroundColor: [
         "rgba(255, 99, 132, 1)",
         "rgba(255, 206, 86, 1)",
         "rgba(239, 139, 44, 1)",
         "rgba(153, 102, 255, 1)",
         "rgba(54, 162, 235, 1)",
-        "rgba(97, 225, 182, 1)",
+        // "rgba(97, 225, 182, 1)",
       ],
       borderWidth: 0,
       cutout: 40,
@@ -57,7 +58,7 @@ export const datamain = {
   ],
 };
 export const data1 = {
-  labels: ["Airdrop", ""],
+  labels: ["Public Sale", ""],
   datasets: [
     {
       // label: [""],
@@ -69,7 +70,7 @@ export const data1 = {
   ],
 };
 export const data2 = {
-  labels: ["Marketing", ""],
+  labels: ["Initial Dex Liquidity", ""],
   datasets: [
     {
       // label: [""],
@@ -81,7 +82,7 @@ export const data2 = {
   ],
 };
 export const data3 = {
-  labels: ["Liquidity Provision", ""],
+  labels: ["Ecosystem Development", ""],
   datasets: [
     {
       // label: [""],
@@ -93,7 +94,7 @@ export const data3 = {
   ],
 };
 export const data4 = {
-  labels: ["Founding Team", ""],
+  labels: ["Team", ""],
   datasets: [
     {
       // label: [""],
@@ -105,7 +106,7 @@ export const data4 = {
   ],
 };
 export const data5 = {
-  labels: ["Treasury", ""],
+  labels: ["Airdrop", ""],
   datasets: [
     {
       // label: [""],
@@ -116,18 +117,18 @@ export const data5 = {
     },
   ],
 };
-export const data6 = {
-  labels: ["IDO", ""],
-  datasets: [
-    {
-      // label: [""],
-      data: [58, 42],
-      backgroundColor: ["rgba(97, 225, 182, 1)", "rgba(70, 73, 78, 1)"],
-      borderWidth: 0,
-      cutout: 22,
-    },
-  ],
-};
+// export const data6 = {
+//   labels: ["IDO", ""],
+//   datasets: [
+//     {
+//       // label: [""],
+//       data: [58, 42],
+//       backgroundColor: ["rgba(97, 225, 182, 1)", "rgba(70, 73, 78, 1)"],
+//       borderWidth: 0,
+//       cutout: 22,
+//     },
+//   ],
+// };
 
 const HomePage = () => {
   //onscroll 2 line animation
@@ -2741,7 +2742,7 @@ const HomePage = () => {
                         <span className="text-white-50 d-block">Treasury</span>
                       </div>
                     </Col>
-                    <Col sm={6} className="d-flex align-items-center my-3">
+                    {/* <Col sm={6} className="d-flex align-items-center my-3">
                       <div className="chart_block_small me-3">
                         <Doughnut
                           data={data6}
@@ -2759,7 +2760,7 @@ const HomePage = () => {
                         58%
                         <span className="text-white-50 d-block">IDO</span>
                       </div>
-                    </Col>
+                    </Col> */}
                   </Row>
                 </Col>
               </Row>
@@ -2858,15 +2859,15 @@ const HomePage = () => {
           </div>
           <div className="team_member">
             <Row>
-              <Col md={6} xl={3} col={12}>
+              <Col md={6} xl={3}>
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img1}
-                      alt="slide_img1"
+                      alt="Stephen Spanias - Chief Marketing Officer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
                       Stephen Spanias
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
@@ -2874,27 +2875,27 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                       Stephen Spanias
                     </div>
-                    <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">Stephen lives and breathes promotion and marketing. He’s worked with global brands such as Samsung and Philip Morris to bring innovative concepts and products to markets around the world.</p>
-                      <p className="text-center px-4">Stephen has been a keen investor and supporter of all things crypto since 2017.
+                    <div className="fs-xl-15px fw-300 text-white text_block">
+                      <p className="text-center">Stephen lives and breathes promotion and marketing. He’s worked with global brands such as Samsung and Philip Morris to bring innovative concepts and products to markets around the world.</p>
+                      <p className="text-center">Stephen has been a keen investor and supporter of all things crypto since 2017.
                       </p>
-                      <p className="text-center px-4">We are excited to have Stephen and his passion for all things marketing and crypto on the team. </p>
+                      <p className="text-center">We are excited to have Stephen and his passion for all things marketing and crypto on the team. </p>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3} col={12}>
+              <Col md={6} xl={3}>
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img2}
-                      alt="slide_img1"
+                      alt="Mahendra P - Lead Developer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
                     Mahendra P
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
@@ -2902,68 +2903,68 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                     Mahendra P
                     </div>
-                    <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">
+                    <div className="fs-xl-15px fw-300 text-white text_block">
+                      <p className="text-center">
                       Mahendra has been involved in the blockchain space since 2017.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       He has worked on multiple blockchain projects as Lead Developer, Architect, and Team Lead.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       Since 2020 he has been performing the role of Blockchain Consultant and has been advising various companies in the DeFi space.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       Mahendra’s expertise in the blockchain space is an asset for any company.
                       </p>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3} col={12}>
+              <Col md={6} xl={3}>
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img3}
-                      alt="slide_img1"
+                      alt="Chirag P - Lead Designer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
                     Chirag P
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
-                    Lead designer
+                    Lead Designer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                     Chirag P
                     </div>
-                    <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">
+                    <div className="fs-xl-15px fw-300 text-white text_block">
+                      <p className="text-center">
                       Chirag has been working as a lead designer since early 2015.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       He has worked on multiple projects in the DeFi space.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       Chirag has also delivered designs for multiple NFT projects in the past. His creative outlook to work is one of the biggest strengths for any team.
                       </p>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3} col={12}>
+              <Col md={6} xl={3}>
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img4}
-                      alt="slide_img1"
+                      alt="Simon Lewis - Advisor"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
                       Simon Lewis
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
@@ -2971,20 +2972,19 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                     Simon Lewis
                     </div>
-                    <div className=" fs-xl-15px fw-300 text-white">
-                      <p className="text-center px-4">
+                    <div className="fs-xl-15px fw-300 text-white text_block">
+                      <p className="text-center">
                         Simon has been involved in Crypto since 2017.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                         In 2018, Simon co-founded Elevate Health which has attracted significant VC funding and was one of the first 'Change/Move to Earn' blockchain projects which have become very popular over the past 6 months. Elevate is still progressing well and will be moving from its pilot projects later this year.
                       </p>
-                      <p className="text-center px-4">
+                      <p className="text-center">
                       In 2020, Simon co-founded Bundles which has achieved significant token returns for investors. In 2022, Simon invited key community members to join him in the team to free up more time to concentrate on building Elevate Health and advising us at Track Dao. 
                       </p>
-                      
                     </div>
                   </div>
                 </div>
