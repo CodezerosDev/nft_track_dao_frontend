@@ -17,6 +17,10 @@ import coins from "../assets/image/coins.png";
 import logopart1 from "../assets/image/logopart1.svg";
 import logopart2 from "../assets/image/logopart2.svg";
 import team_one_img from "../assets/image/team_one.png";
+import team_img1 from "../assets/image/team_stephen_img.png";
+import team_img2 from "../assets/image/team_mahindra_img.png";
+import team_img3 from "../assets/image/team_chirag_img.png";
+import team_img4 from "../assets/image/team_simon_img.png";
 import hrlinelogo from "../assets/image/hrlinelogo.png";
 import greenright from "../assets/image/green_right.svg";
 import Slider from "react-slick/lib/slider";
@@ -2567,7 +2571,7 @@ const HomePage = () => {
             <Col xl={12}>
               <div className="key_blocks">
                 <h4 className="fs-32px gren_title fw-400">
-                  Capital efficiency
+                  Capital Efficiency
                 </h4>
                 <p className="fs-18 fw-300 text-white">
                   The price of the token starts high and drops based on a
@@ -2854,92 +2858,133 @@ const HomePage = () => {
           </div>
           <div className="team_member">
             <Row>
-              <Col xl={4} col={12}>
+              <Col md={6} xl={3} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className=" team_member_info">
+                  <div className="team_member_info">
                     <img
-                      src={team_one_img}
+                      src={team_img1}
                       alt="slide_img1"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">
-                      Kenny Sandulak
+                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                      Stephen Spanias
                     </h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
-                      Community Management
+                    <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
+                      Chief Marketing Officer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">
-                      Kenny Sandulak
+                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                      Stephen Spanias
+                    </div>
+                    <div className=" fs-xl-15px fw-300 text-white">
+                      <p className="text-center px-4">Stephen lives and breathes promotion and marketing. He’s worked with global brands such as Samsung and Philip Morris to bring innovative concepts and products to markets around the world.</p>
+                      <p className="text-center px-4">Stephen has been a keen investor and supporter of all things crypto since 2017.
+                      </p>
+                      <p className="text-center px-4">We are excited to have Stephen and his passion for all things marketing and crypto on the team. </p>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+              <Col md={6} xl={3} col={12}>
+                <div className="bluechip_img img-border-box">
+                  <div className="team_member_info">
+                    <img
+                      src={team_img2}
+                      alt="slide_img1"
+                      className="img-fluid mb-2"
+                    />
+                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    Mahendra P
+                    </h4>
+                    <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
+                    Lead Developer
+                    </div>
+                  </div>
+                  <div className="bluechip_oeverlap">
+                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    Mahendra P
                     </div>
                     <div className=" fs-xl-15px fw-300 text-white">
                       <p className="text-center px-4">
-                        Kenny graduated from Sprott-Shaw College in Vancouver,
-                        Canada, in Social Services. He is a Canadian Certified
-                        Addiction Counsellor and certified Substance Abuse
-                        Therapist. Until Covid in April 2020, Ken worked in
-                        mental health and with at-risk youth. When Covid caused
-                        the inability to meet clients, Ken decided to
-                        concentrate on his long term love of crypto and started
-                        working in several Telegram and Discord community chats.
-                        Because of his extensive counselling experience, he
-                        isn’t your average mod!
+                      Mahendra has been involved in the blockchain space since 2017.
+                      </p>
+                      <p className="text-center px-4">
+                      He has worked on multiple blockchain projects as Lead Developer, Architect, and Team Lead.
+                      </p>
+                      <p className="text-center px-4">
+                      Since 2020 he has been performing the role of Blockchain Consultant and has been advising various companies in the DeFi space.
+                      </p>
+                      <p className="text-center px-4">
+                      Mahendra’s expertise in the blockchain space is an asset for any company.
                       </p>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col xl={4} col={12}>
+              <Col md={6} xl={3} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className=" team_member_info">
+                  <div className="team_member_info">
                     <img
-                      src={team_one_img}
+                      src={team_img3}
                       alt="slide_img1"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">
-                      To be decided
+                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                    Chirag P
                     </h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
-                      To be decided
+                    <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
+                    Lead designer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">
-                      To be decided
+                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    Chirag P
                     </div>
                     <div className=" fs-xl-15px fw-300 text-white">
                       <p className="text-center px-4">
-                        To be decided
+                      Chirag has been working as a lead designer since early 2015.
+                      </p>
+                      <p className="text-center px-4">
+                      He has worked on multiple projects in the DeFi space.
+                      </p>
+                      <p className="text-center px-4">
+                      Chirag has also delivered designs for multiple NFT projects in the past. His creative outlook to work is one of the biggest strengths for any team.
                       </p>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col xl={4} col={12}>
+              <Col md={6} xl={3} col={12}>
                 <div className="bluechip_img img-border-box">
-                  <div className=" team_member_info">
+                  <div className="team_member_info">
                     <img
-                      src={team_one_img}
+                      src={team_img4}
                       alt="slide_img1"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-32px gren_title fw-400 pt-3">
-                      To be decided
+                    <h4 className="fs-28px gren_title fw-400 pt-3">
+                      Simon Lewis
                     </h4>
-                    <div className="fs-xl-25px fs-md-20px text-white fw-400 pb-4">
-                      To be decided
+                    <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
+                      Advisor
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-lg-45px fw-700  gren_title mb-3">
-                      To be decided
+                    <div className="fs-lg-40px fs-md-36px fw-700 gren_title mb-2">
+                    Simon Lewis
                     </div>
                     <div className=" fs-xl-15px fw-300 text-white">
                       <p className="text-center px-4">
-                        To be decided
+                        Simon has been involved in Crypto since 2017.
                       </p>
+                      <p className="text-center px-4">
+                        In 2018, Simon co-founded Elevate Health which has attracted significant VC funding and was one of the first 'Change/Move to Earn' blockchain projects which have become very popular over the past 6 months. Elevate is still progressing well and will be moving from its pilot projects later this year.
+                      </p>
+                      <p className="text-center px-4">
+                      In 2020, Simon co-founded Bundles which has achieved significant token returns for investors. In 2022, Simon invited key community members to join him in the team to free up more time to concentrate on building Elevate Health and advising us at Track Dao. 
+                      </p>
+                      
                     </div>
                   </div>
                 </div>
@@ -2954,11 +2999,11 @@ const HomePage = () => {
             <Row className="justify-content-around ">
               <div className="col-xl-6 col-lg-4 col text-center hr_line_left">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">Q2 2022</div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q3 2022</div>
               </div>
               <div className="col-xl-6 col-lg-4 col  hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">Q3 2022</div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q4 2022</div>
               </div>
             </Row>
           </div>
