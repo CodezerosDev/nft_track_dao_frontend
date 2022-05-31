@@ -2662,8 +2662,8 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_1 lh-sm">
-                        5%
-                        <span className="text-white-50 d-block">Airdrop</span>
+                        470,000
+                        <span className="text-white-50 d-block">Public Sale</span>
                       </div>
                     </Col>
                     <Col sm={6} className="d-flex align-items-center my-3">
@@ -2681,8 +2681,8 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_2 lh-sm">
-                        6%
-                        <span className="text-white-50 d-block">Marketing</span>
+                        280,000
+                        <span className="text-white-50 d-block">Initial Dex Liquidity</span>
                       </div>
                     </Col>
                     <Col sm={6} className="d-flex align-items-center my-3">
@@ -2700,8 +2700,8 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_3 lh-sm">
-                        9%
-                        <span className="text-white-50 d-block">Liquidity Provision</span>
+                        100,000
+                        <span className="text-white-50 d-block">Ecosystem Development</span>
                       </div>
                     </Col>
                     <Col sm={6} className="d-flex align-items-center my-3">
@@ -2719,8 +2719,8 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_4 lh-sm">
-                        10%
-                        <span className="text-white-50 d-block">Founding Team</span>
+                      100,000
+                        <span className="text-white-50 d-block">Team</span>
                       </div>
                     </Col>
                     <Col sm={6} className="d-flex align-items-center my-3">
@@ -2738,8 +2738,8 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_5 lh-sm">
-                        12%
-                        <span className="text-white-50 d-block">Treasury</span>
+                      50,000
+                        <span className="text-white-50 d-block">Airdrop</span>
                       </div>
                     </Col>
                     {/* <Col sm={6} className="d-flex align-items-center my-3">
@@ -2896,28 +2896,28 @@ const HomePage = () => {
                       className="img-fluid mb-2"
                     />
                     <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
-                    Mahendra P
+                      Mahendra P
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
-                    Lead Developer
+                      Lead Developer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                    Mahendra P
+                      Mahendra P
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
-                      Mahendra has been involved in the blockchain space since 2017.
+                        Mahendra has been involved in the blockchain space since 2017.
                       </p>
                       <p className="text-center">
-                      He has worked on multiple blockchain projects as Lead Developer, Architect, and Team Lead.
+                        He has worked on multiple blockchain projects as Lead Developer, Architect, and Team Lead.
                       </p>
                       <p className="text-center">
-                      Since 2020 he has been performing the role of Blockchain Consultant and has been advising various companies in the DeFi space.
+                        Since 2020 he has been performing the role of Blockchain Consultant and has been advising various companies in the DeFi space.
                       </p>
                       <p className="text-center">
-                      Mahendra’s expertise in the blockchain space is an asset for any company.
+                        Mahendra’s expertise in the blockchain space is an asset for any company.
                       </p>
                     </div>
                   </div>
@@ -2932,25 +2932,25 @@ const HomePage = () => {
                       className="img-fluid mb-2"
                     />
                     <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
-                    Chirag P
+                      Chirag P
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
-                    Lead Designer
+                      Lead Designer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                    Chirag P
+                      Chirag P
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
-                      Chirag has been working as a lead designer since early 2015.
+                        Chirag has been working as a lead designer since early 2015.
                       </p>
                       <p className="text-center">
-                      He has worked on multiple projects in the DeFi space.
+                        He has worked on multiple projects in the DeFi space.
                       </p>
                       <p className="text-center">
-                      Chirag has also delivered designs for multiple NFT projects in the past. His creative outlook to work is one of the biggest strengths for any team.
+                        Chirag has also delivered designs for multiple NFT projects in the past. His creative outlook to work is one of the biggest strengths for any team.
                       </p>
                     </div>
                   </div>
@@ -2973,7 +2973,7 @@ const HomePage = () => {
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                    Simon Lewis
+                      Simon Lewis
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
@@ -2983,7 +2983,7 @@ const HomePage = () => {
                         In 2018, Simon co-founded Elevate Health which has attracted significant VC funding and was one of the first 'Change/Move to Earn' blockchain projects which have become very popular over the past 6 months. Elevate is still progressing well and will be moving from its pilot projects later this year.
                       </p>
                       <p className="text-center">
-                      In 2020, Simon co-founded Bundles which has achieved significant token returns for investors. In 2022, Simon invited key community members to join him in the team to free up more time to concentrate on building Elevate Health and advising us at Track Dao. 
+                        In 2020, Simon co-founded Bundles which has achieved significant token returns for investors. In 2022, Simon invited key community members to join him in the team to free up more time to concentrate on building Elevate Health and advising us at Track Dao.
                       </p>
                     </div>
                   </div>
