@@ -329,7 +329,7 @@ section.slider_one {
       &:nth-child(1) {
         &::before {
           content: "";
-          @media only screen and (min-width: 768x) {
+          @media only screen and (min-width: 768px) {
             display: none;
           }
         }
@@ -487,6 +487,10 @@ section.slider_one {
     -webkit-backdrop-filter: blur(50px);
     padding: 38px 55px 33px 52px;
     margin-bottom: 19px;
+    height: 100%;
+    p:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 .most_trusted {
@@ -856,12 +860,15 @@ footer {
 .sidebar {
   position: fixed;
   width: 220px;
-  padding: 20px;
+  padding: 15px;
   background: rgba(10, 15, 26, 0.97);
   border-right: 1px solid #313f63;
   z-index: 1111111;
   top: 0;
   bottom: 0;
+  @media only screen and (max-width: 1199px) {
+    padding: 20px;
+  }
   .nav-item {
     border-top: 1px solid #313f63;
     // margin: 5px 0;
@@ -872,10 +879,17 @@ footer {
   }
   .nav-link {
     color: #fff;
-    padding: 10px 0;
+    padding: 5px 0;
+    @media only screen and (min-width: 1199px) {
+      padding: 10px 0;
+    }
     &:hover {
       color: #8dff26;
     }
+  }
+  .navlinks_block{
+    overflow-x: auto;
+    max-height: 80%;
   }
 }
 
@@ -898,6 +912,11 @@ footer {
   .team_member {
     position: relative;
     z-index: 1;
+    .colm{
+      @media only screen and (min-width: 1199px) {
+        width: 20% !important;
+      }
+    }
     .team_member_info {
       h4 {
         & + div {
@@ -906,4 +925,38 @@ footer {
       }
     }
   }
+}
+.scrolltotop{
+  background-color: rgba(141, 255, 38, 0.5);
+  right: 25px;
+  bottom: 30px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.300s ease-in-out;
+  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+  border: none;
+  outline: none;
+  z-index: 22222222 !important;
+}
+.scrolltotop:hover{
+  background-color: rgba(141, 255, 38, 0.8);
+}
+.styles_scroll-to-top__2A70v {
+  background-color: white;
+  right: 40px;
+  bottom: 40px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 40px;
+  height: 40px;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+  border: none;
+  outline: none;
 }
