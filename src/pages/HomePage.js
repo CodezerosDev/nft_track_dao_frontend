@@ -2662,7 +2662,7 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_1 lh-sm">
-                        470,000
+                        5%
                         <span className="text-white-50 d-block">Public Sale</span>
                       </div>
                     </Col>
@@ -2681,7 +2681,7 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_2 lh-sm">
-                        280,000
+                        6%
                         <span className="text-white-50 d-block">Initial Dex Liquidity</span>
                       </div>
                     </Col>
@@ -2700,7 +2700,7 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_3 lh-sm">
-                        100,000
+                        7%
                         <span className="text-white-50 d-block">Ecosystem Development</span>
                       </div>
                     </Col>
@@ -2719,7 +2719,7 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_4 lh-sm">
-                      100,000
+                        9%
                         <span className="text-white-50 d-block">Team</span>
                       </div>
                     </Col>
@@ -2738,7 +2738,7 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="chart_text chart_5 lh-sm">
-                      50,000
+                        10%
                         <span className="text-white-50 d-block">Airdrop</span>
                       </div>
                     </Col>
@@ -2859,7 +2859,7 @@ const HomePage = () => {
           </div>
           <div className="team_member">
             <Row>
-              <Col md={6} xl={3}>
+              <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
@@ -2867,7 +2867,7 @@ const HomePage = () => {
                       alt="Stephen Spanias - Chief Marketing Officer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
                       Stephen Spanias
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
@@ -2875,7 +2875,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                       Stephen Spanias
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
@@ -2887,24 +2887,24 @@ const HomePage = () => {
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3}>
+              <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img2}
-                      alt="Mahendra P - Lead Developer"
+                      alt="Mahendra Panchal - Lead Developer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
-                      Mahendra P
+                    <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
+                      Mahendra Panchal
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
                       Lead Developer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                      Mahendra P
+                    <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
+                      Mahendra Panchal
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
@@ -2923,24 +2923,24 @@ const HomePage = () => {
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3}>
+              <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
                       src={team_img3}
-                      alt="Chirag P - Lead Designer"
+                      alt="Chirag Prajapati - Lead Designer"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
-                      Chirag P
+                    <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
+                      Chirag Prajapati
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
                       Lead Designer
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                      Chirag P
+                    <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
+                      Chirag Prajapati
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
@@ -2956,7 +2956,34 @@ const HomePage = () => {
                   </div>
                 </div>
               </Col>
-              <Col md={6} xl={3}>
+              <Col sm={6} md={4} xl={3} className="colm">
+                <div className="bluechip_img img-border-box">
+                  <div className="team_member_info">
+                    <img
+                      src={team_one_img}
+                      alt="Kenny Sandulak - Community Management"
+                      className="img-fluid mb-2"
+                    />
+                    <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
+                    Kenny Sandulak
+                    </h4>
+                    <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
+                    Community Management
+                    </div>
+                  </div>
+                  <div className="bluechip_oeverlap">
+                    <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
+                    Kenny Sandulak
+                    </div>
+                    <div className="fs-xl-15px fw-300 text-white text_block">
+                      <p className="text-center">
+                      Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services. He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist. Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and started working in several Telegram and Discord community chats. Because of his extensive counselling experience, he isn’t your average mod!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+              <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
@@ -2964,7 +2991,7 @@ const HomePage = () => {
                       alt="Simon Lewis - Advisor"
                       className="img-fluid mb-2"
                     />
-                    <h4 className="fs-20px fs-md-22px fs-xl-26px fs-xxl-28px gren_title fw-400 pt-3">
+                    <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
                       Simon Lewis
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
@@ -2972,7 +2999,7 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
-                    <div className="fs-xxl-36px fs-xl-32px fs-lg-28px fs-24px fw-700 gren_title mb-2">
+                    <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
                       Simon Lewis
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
@@ -3031,6 +3058,7 @@ const HomePage = () => {
                   <img src={greenright} alt="" /> DAO voting mechanisms
                   introduced
                 </p>
+                
               </div>
             </Col>
             <Col xl={4} className=" listing_checkbox_right">

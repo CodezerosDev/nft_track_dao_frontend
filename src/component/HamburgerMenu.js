@@ -18,7 +18,7 @@ export default function BasicMenu() {
     return (
         <>
             <div className="">
-                <div className="nav_toggle ms-3 " onClick={handleOpenMenu}>
+                <div className="nav_toggle ms-3 " onClick={handleOpenMenu} >
                     <img src={menuIcon} alt="menu" />
                 </div>
 
@@ -28,7 +28,7 @@ export default function BasicMenu() {
                             <div className="menu_close" onClick={handleCloseMenu}>
                                 <img src={crossIcon} alt="menu" />
                             </div>
-                            <Nav className="d-block mt-4">
+                            <Nav className="d-block mt-4 navlinks_block">
                                 <Nav.Item className="py-2">
                                     <Nav.Link href="/">Home</Nav.Link>
                                 </Nav.Item>
@@ -52,6 +52,9 @@ export default function BasicMenu() {
                                 </Nav.Item>
                                 <Nav.Item className="py-2">
                                     <Nav.Link href="#roadmap" >Roadmap</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className="py-2">
+                                    <Nav.Link href="https://solidity.finance/audits/TRACKToken/" target={"_blank"} >Audit</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>
