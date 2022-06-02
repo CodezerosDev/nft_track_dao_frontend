@@ -42,7 +42,7 @@ export const datamain = {
   datasets: [
     {
       // label: [""],
-      // data: [5, 6, 9, 10, 12, 58],
+      // data: [5, 6, 9, 10, 12, 58], 22,
       data: [470000, 280000, 100000, 100000, 50000],
       backgroundColor: [
         "rgba(255, 99, 132, 1)",
@@ -65,7 +65,7 @@ export const data1 = {
       data: [5, 95],
       backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(70, 73, 78, 1)"],
       borderWidth: 0,
-      cutout: 22,
+      cutout: 26,
     },
   ],
 };
@@ -77,7 +77,7 @@ export const data2 = {
       data: [6, 94],
       backgroundColor: ["rgba(255, 206, 86, 1)", "rgba(70, 73, 78, 1)"],
       borderWidth: 0,
-      cutout: 22,
+      cutout: 26,
     },
   ],
 };
@@ -89,7 +89,7 @@ export const data3 = {
       data: [9, 91],
       backgroundColor: ["rgba(239, 139, 44, 1)", "rgba(70, 73, 78, 1)"],
       borderWidth: 0,
-      cutout: 22,
+      cutout: 26,
     },
   ],
 };
@@ -101,7 +101,7 @@ export const data4 = {
       data: [10, 90],
       backgroundColor: ["rgba(153, 102, 255, 1)", "rgba(70, 73, 78, 1)"],
       borderWidth: 0,
-      cutout: 22,
+      cutout: 26,
     },
   ],
 };
@@ -113,7 +113,7 @@ export const data5 = {
       data: [12, 88],
       backgroundColor: ["rgba(54, 162, 235, 1)", "rgba(70, 73, 78, 1)"],
       borderWidth: 0,
-      cutout: 22,
+      cutout: 26,
     },
   ],
 };
@@ -125,7 +125,7 @@ export const data5 = {
 //       data: [58, 42],
 //       backgroundColor: ["rgba(97, 225, 182, 1)", "rgba(70, 73, 78, 1)"],
 //       borderWidth: 0,
-//       cutout: 22,
+//       cutout: 26,
 //     },
 //   ],
 // };
@@ -2660,9 +2660,12 @@ const HomePage = () => {
                             },
                           }}
                         />
+                        <div className="chart_num">
+                          5%
+                        </div>
                       </div>
                       <div className="chart_text chart_1 lh-sm">
-                        5%
+                        470,000
                         <span className="text-white-50 d-block">Public Sale</span>
                       </div>
                     </Col>
@@ -2679,9 +2682,12 @@ const HomePage = () => {
                             },
                           }}
                         />
+                        <div className="chart_num">
+                          6%
+                        </div>
                       </div>
                       <div className="chart_text chart_2 lh-sm">
-                        6%
+                        280,000
                         <span className="text-white-50 d-block">Initial Dex Liquidity</span>
                       </div>
                     </Col>
@@ -2698,9 +2704,12 @@ const HomePage = () => {
                             },
                           }}
                         />
+                        <div className="chart_num">
+                          8%
+                        </div>
                       </div>
                       <div className="chart_text chart_3 lh-sm">
-                        7%
+                        100,000
                         <span className="text-white-50 d-block">Ecosystem Development</span>
                       </div>
                     </Col>
@@ -2717,9 +2726,12 @@ const HomePage = () => {
                             },
                           }}
                         />
+                        <div className="chart_num">
+                          10%
+                        </div>
                       </div>
                       <div className="chart_text chart_4 lh-sm">
-                        9%
+                        100,000
                         <span className="text-white-50 d-block">Team</span>
                       </div>
                     </Col>
@@ -2736,9 +2748,12 @@ const HomePage = () => {
                             },
                           }}
                         />
+                        <div className="chart_num">
+                          7%
+                        </div>
                       </div>
                       <div className="chart_text chart_5 lh-sm">
-                        10%
+                        50,000
                         <span className="text-white-50 d-block">Airdrop</span>
                       </div>
                     </Col>
@@ -2965,19 +2980,19 @@ const HomePage = () => {
                       className="img-fluid mb-2"
                     />
                     <h4 className="fs-20px fs-md-22px fs-xl-20px fs-xxl-26px gren_title fw-400 pt-3">
-                    Kenny Sandulak
+                      Kenny Sandulak
                     </h4>
                     <div className="fs-xl-22px fs-md-20px text-white fw-400 pb-4">
-                    Community Management
+                      Community Management
                     </div>
                   </div>
                   <div className="bluechip_oeverlap">
                     <div className="fs-xxl-32px fs-xl-24px fs-lg-28px fs-24px fw-700 gren_title mb-2">
-                    Kenny Sandulak
+                      Kenny Sandulak
                     </div>
                     <div className="fs-xl-15px fw-300 text-white text_block">
                       <p className="text-center">
-                      Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services. He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist. Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and started working in several Telegram and Discord community chats. Because of his extensive counselling experience, he isn’t your average mod!
+                        Kenny graduated from Sprott-Shaw College in Vancouver, Canada, in Social Services. He is a Canadian Certified Addiction Counsellor and certified Substance Abuse Therapist. Until Covid in April 2020, Ken worked in mental health and with at-risk youth. When Covid caused the inability to meet clients, Ken decided to concentrate on his long term love of crypto and started working in several Telegram and Discord community chats. Because of his extensive counselling experience, he isn’t your average mod!
                       </p>
                     </div>
                   </div>
@@ -3058,7 +3073,7 @@ const HomePage = () => {
                   <img src={greenright} alt="" /> DAO voting mechanisms
                   introduced
                 </p>
-                
+
               </div>
             </Col>
             <Col xl={4} className=" listing_checkbox_right">
