@@ -519,7 +519,20 @@ section.slider_one {
     max-width: 150px;
   }
   .chart_block_small {
-    max-width: 60px;
+    max-width: 70px;
+    position: relative;
+  }
+  .chart_num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
   }
   .chart_text {
     font-size: 24px;
