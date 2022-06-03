@@ -2662,7 +2662,7 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          5%
+                          {((470000 * 100) / 1000000)}%
                         </div>
                       </div>
                       <div className="chart_text chart_1 lh-sm">
@@ -2684,7 +2684,7 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          6%
+                          {((280000 * 100) / 1000000)}%
                         </div>
                       </div>
                       <div className="chart_text chart_2 lh-sm">
@@ -2706,7 +2706,8 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          8%
+                          {((100000 * 100) / 1000000)}%
+
                         </div>
                       </div>
                       <div className="chart_text chart_3 lh-sm">
@@ -2728,7 +2729,8 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          10%
+                          {((100000 * 100) / 1000000)}%
+
                         </div>
                       </div>
                       <div className="chart_text chart_4 lh-sm">
@@ -2750,7 +2752,8 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          7%
+                          {((50000 * 100) / 1000000)}%
+
                         </div>
                       </div>
                       <div className="chart_text chart_5 lh-sm">
