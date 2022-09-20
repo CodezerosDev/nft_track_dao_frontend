@@ -24,7 +24,7 @@ pipeline {
                     sh 'node -v ; npm -v'
                     sh 'npm prune'
 		    sh 'rm -rf node_modules package-lock.json'
-                    sh 'npm install'
+                    sh 'npm install --legacy-peer-deps'
                     sh 'pwd ; ls -ltr'
                     sh 'apk update ; apk add --no-cache aws-cli && aws --version ; which aws'
                     echo 'Downloading latest env'
