@@ -1,4 +1,9 @@
-PROJECT NAME
+
+Node version:16.17.0
+React version: 17.0.2
+npm version: 8.12.1
+
+PROJECT NAME:NFT TrackDAO ($TRACK)
 
 Step 1
 command : npm i

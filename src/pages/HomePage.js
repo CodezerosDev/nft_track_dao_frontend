@@ -2519,7 +2519,7 @@ const HomePage = () => {
                       Too many DAOs and protocols are negatively impacted by VCs
                       and other private sale buyers purchasing tokens at low
                       prices and then using Dex liquidity to exit. With NFT
-                      TrackDAO, there is only one sale with the same entry point
+                      TrackDAO, there is only one sale with the same opportunity
                       for all participants.
                     </p>
                   </div>
@@ -2536,15 +2536,15 @@ const HomePage = () => {
             <div className="ovelay_dark" id="animation_ovelay_dark">
               <h4 className="fs-xl-55px fs-md-30px fw-700 text-white">
                 Our sale will take place on{" "}
-                <span className="gren_title fw-700">Copperlaunch.com</span>
+                <span className="gren_title fw-700">Fjordfoundry.com</span>
               </h4>
               <div>
                 <p className="fs-18px fw-300 text-white">
-                  'Copper is the most open, transparent, and user-friendly way
+                  Fjord Foundry is the most open, transparent, and user-friendly way
                   to participate in Balancer Liquidity Bootstrapping Pools.
                   Liquidity and price discovery for an idea can now be easily
-                  bootstrapped by any community. Copper is here to help make
-                  LBPs accessible for everyone.'
+                  bootstrapped by any community. Fjord Foundry is here to help make
+                  LBPs accessible for everyone.
                 </p>
               </div>
             </div>
@@ -3045,11 +3045,11 @@ const HomePage = () => {
             <Row className="justify-content-around ">
               <div className="col-xl-6 col-lg-4 col text-center hr_line_left">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">Q3 2022</div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q1 2023</div>
               </div>
               <div className="col-xl-6 col-lg-4 col  hr_line_right">
                 <img src={hrlinelogo} alt="hrlogo" />
-                <div className="fs-xl-40px gren_title fw-700 ">Q4 2022</div>
+                <div className="fs-xl-40px gren_title fw-700 ">Q2 2023</div>
               </div>
             </Row>
           </div>
@@ -3061,11 +3061,14 @@ const HomePage = () => {
             <Col xl={4} className=" listing_checkbox_left">
               <div className="key_blocks text-white">
                 <p className="fw-300 fs-xl-18px ">
-                  <img src={greenright} alt="" /> Initial LBP on Copper Launch
+                  <img src={greenright} alt="" /> NFT Index expansion via community vote
                 </p>
                 <p>
+                <img src={greenright} alt="" /> Initial LBP on Fjord Foundry
+               </p>
+                 <p>
                   <img src={greenright} alt="" /> DEX listing
-                </p>
+                 </p>
                 <p>
                   <img src={greenright} alt="" /> Calibrations start every 24
                   hours
@@ -3073,10 +3076,7 @@ const HomePage = () => {
                 <p>
                   <img src={greenright} alt="" /> Dashboard launch
                 </p>
-                <p>
-                  <img src={greenright} alt="" /> DAO voting mechanisms
-                  introduced
-                </p>
+                
 
               </div>
             </Col>
@@ -3087,8 +3087,7 @@ const HomePage = () => {
                   Chip NFT assets
                 </p>
                 <p>
-                  <img src={greenright} alt="" /> Further deployment of
-                  governance mechanisms
+                  <img src={greenright} alt="" /> DAO voting mechanisms introduced
                 </p>
                 <p>
                   <img src={greenright} alt="" /> Community and marketing
