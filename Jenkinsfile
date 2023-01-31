@@ -18,7 +18,7 @@ pipeline {
         }
         stage('check & upload') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'mayur.patel', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'CZDevServer', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                 script {
                     sh "ls -ltr ; pwd"
                     sh 'node -v ; npm -v'
@@ -28,10 +28,10 @@ pipeline {
                     sh 'pwd ; ls -ltr'
                     sh 'apk update ; apk add --no-cache aws-cli && aws --version ; which aws'
                     echo 'Downloading latest env'
-                    sh 'aws s3 cp s3://cz-application-env-tfstate-files-bucket/nft-track-dao/.env .'
+                    sh 'aws s3 cp s3://cz-application-env-tfstate-files/nft-track-dao/.env .'
                     sh 'npm run build'
                     sh 'pwd ; ls -ltr'
-                    sh 'aws s3 sync ./build s3://nft-track-dao-frontend/'
+                    sh 'aws s3 sync ./build s3://nft-track-dao-front/'
                     }
                 }  
             }
