@@ -75,42 +75,42 @@ export default function SimpleSlider() {
         <Slider {...settings}>
             <div className="slide_border ">
                 <img src={mutant} alt="img1"></img>
-                <p>Mutant Ape Yacht Club</p>
+                  {/*<p>Mutant Ape Yacht Club</p>*/}
             </div>
 
             <div className="slide_border">
                 <img src={meebits} alt="img2"></img>
-                <p>Meebits</p>
+                 {/*<p>Meebits</p>*/}
             </div>
 
             <div className="slide_border">
                 <img src={cloneX} alt="img3"></img>
-                <p>CloneX</p>
+                {/*<p>CloneX</p>*/}
             </div>
 
             <div className="slide_border">
                 <img src={azuki} alt="img4"></img>
-                <p>Azuki</p>
+                {/* <p>Azuki</p>*/}
             </div>
 
             <div className="slide_border ">
                 <img src={boarClub} alt="img5"></img>
-                <p>Bored Ape Yacht Club</p>
+                {/* <p>Bored Ape Yacht Club</p>*/}
             </div>
 
             <div className="slide_border ">
                 <img src={doodles} alt="img5"></img>
-                <p>Doodles</p>
+               {/* <p>Doodles</p>*/}
             </div>
 
             <div className="slide_border">
                 <img src={coolCats} alt="img6"></img>
-                <p>Cool Cats</p>
+                /{/* <p>Cool Cats</p>*/}
             </div>
 
             <div className="slide_border">
                 <img src={worldWomen} alt="img7"></img>
-                <p>World of Women</p>
+                {/* <p>World of Women</p>*/}
             </div>
 
         </Slider>

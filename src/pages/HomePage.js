@@ -16,12 +16,12 @@ import sale_willbanner from "../assets/image/sale_willbanner.png";
 import coins from "../assets/image/coins.png";
 import logopart1 from "../assets/image/logopart1.svg";
 import logopart2 from "../assets/image/logopart2.svg";
-import team_one_img from "../assets/image/team_one.png";
+// import team_one_img from "../assets/image/team_one.png";
 import team_img1 from "../assets/image/team_stephen_img.png";
 import team_img2 from "../assets/image/team_mahindra_img.png";
 import team_img3 from "../assets/image/team_chirag_img.png";
 import team_img4 from "../assets/image/team_kenny_img.png";
-import team_img5 from "../assets/image/team_simon_img.png";
+// import team_img5 from "../assets/image/team_simon_img.png";
 import hrlinelogo from "../assets/image/hrlinelogo.png";
 import greenright from "../assets/image/green_right.svg";
 import Slider from "react-slick/lib/slider";
@@ -3002,7 +3002,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </Col>
-              <Col sm={6} md={4} xl={3} className="colm">
+             {/* <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
@@ -3034,7 +3034,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-              </Col>
+            </Col>*/}
             </Row>
           </div>
         </Container>
