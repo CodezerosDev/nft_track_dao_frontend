@@ -3002,7 +3002,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </Col>
-              <Col sm={6} md={4} xl={3} className="colm">
+             {/* <Col sm={6} md={4} xl={3} className="colm">
                 <div className="bluechip_img img-border-box">
                   <div className="team_member_info">
                     <img
@@ -3034,7 +3034,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-              </Col>
+            </Col>*/}
             </Row>
           </div>
         </Container>
