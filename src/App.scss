@@ -929,6 +929,12 @@ footer {
 .tweeterIcon {
   padding-right: 10px;
 }
+.socialIcon {
+  display: flex;
+}
+.socialIcon img {
+  height: 41px;
+}
 
 .our-team {
   .team_member {
