@@ -6,6 +6,10 @@ import dashogo from "../../assets/image/dash_logo.svg";
 import { Web3Context } from '../../web3/contexts/web3Context'
 // import { Link } from "react-router-dom";
 import HamburgerMenu from '../HamburgerMenu'
+import tweeterIcon from '../../assets/image/tweeterIcon.svg';
+import discordIcon from '../../assets/image/DiscordIcon.svg'
+import telegramIcon from '../../assets/image/telegram.svg'
+import ScrollToTop from "react-scroll-to-top";
 
 function Header() {
     const { networkDetails, handleConnect, loading, setLoading } = useContext(Web3Context)
@@ -43,6 +47,12 @@ function Header() {
                 {<div className="mx-auto dashboard_logo">
                     {/*<img src={dashogo} alt="dash_logo" className='img-fluid' />*/}
                 </div>}
+                <div className="socialIcon ">
+                <a target="_blank" href="https://t.me/TrackDaoGroup"><p className="mb-0 fs-16px fw-300 tweeterIcon" ><img src={telegramIcon} /></p></a>
+                <a target="_blank" href="https://twitter.com/NFTTrackDAO?t=EMEtQiBF6p0zOlT9SyTqKQ&s=08"><p className="mb-0 fs-16px fw-300 tweeterIcon"><img src={tweeterIcon} /></p></a>
+                <a target="_blank" href="https://discord.gg/JJNHWyhEvP"><p className="mb-0 fs-16px fw-300 tweeterIcon"><img src={discordIcon} /></p></a>
+
+            </div>
                 <div className="btn_connect text-center me-4">
                     {!networkDetails.address &&
                         <Button className="fs-22px connect_btn_head" size="lg" onClick={connectWallet} >
