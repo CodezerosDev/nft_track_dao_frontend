@@ -33,8 +33,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const datamain = {
   labels: [
-    "Public Sale",
-    "Initial Dex Liquidity ",
+    "LBP Event",
+    // "Initial Dex Liquidity ",
     "Ecosystem Development ",
     "Team",
     "Airdrop",
@@ -44,10 +44,10 @@ export const datamain = {
     {
       // label: [""],
       // data: [5, 6, 9, 10, 12, 58], 22,
-      data: [470000, 280000, 100000, 100000, 50000],
+      data: [750000, 100000, 100000, 50000],
       backgroundColor: [
         "rgba(255, 99, 132, 1)",
-        "rgba(255, 206, 86, 1)",
+       // "rgba(255, 206, 86, 1)",
         "rgba(239, 139, 44, 1)",
         "rgba(153, 102, 255, 1)",
         "rgba(54, 162, 235, 1)",
@@ -59,7 +59,7 @@ export const datamain = {
   ],
 };
 export const data1 = {
-  labels: ["Public Sale", ""],
+  labels: ["LBP Event", ""],
   datasets: [
     {
       // label: [""],
@@ -70,18 +70,18 @@ export const data1 = {
     },
   ],
 };
-export const data2 = {
-  labels: ["Initial Dex Liquidity", ""],
-  datasets: [
-    {
-      // label: [""],
-      data: [6, 94],
-      backgroundColor: ["rgba(255, 206, 86, 1)", "rgba(70, 73, 78, 1)"],
-      borderWidth: 0,
-      cutout: 26,
-    },
-  ],
-};
+// export const data2 = {
+//   labels: ["Initial Dex Liquidity", ""],
+//   datasets: [
+//     {
+//       // label: [""],
+//       data: [6, 94],
+//       backgroundColor: ["rgba(255, 206, 86, 1)", "rgba(70, 73, 78, 1)"],
+//       borderWidth: 0,
+//       cutout: 26,
+//     },
+//   ],
+// };
 export const data3 = {
   labels: ["Ecosystem Development", ""],
   datasets: [
@@ -2662,15 +2662,15 @@ const HomePage = () => {
                           }}
                         />
                         <div className="chart_num">
-                          {((470000 * 100) / 1000000)}%
+                          {((750000 * 100) / 1000000)}%
                         </div>
                       </div>
                       <div className="chart_text chart_1 lh-sm">
-                        470,000
-                        <span className="text-white-50 d-block">Public Sale</span>
+                        750,000
+                        <span className="text-white-50 d-block">LBP Event</span>
                       </div>
                     </Col>
-                    <Col sm={6} className="d-flex align-items-center my-3">
+                    {/*<Col sm={6} className="d-flex align-items-center my-3">
                       <div className="chart_block_small me-3">
                         <Doughnut
                           data={data2}
@@ -2691,7 +2691,7 @@ const HomePage = () => {
                         280,000
                         <span className="text-white-50 d-block">Initial Dex Liquidity</span>
                       </div>
-                    </Col>
+                        </Col>*/}
                     <Col sm={6} className="d-flex align-items-center my-3">
                       <div className="chart_block_small me-3">
                         <Doughnut
