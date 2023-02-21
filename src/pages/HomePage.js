@@ -34,6 +34,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export const datamain = {
   labels: [
     "LBP & Uniswap Liquidity",
+
     // "Initial Dex Liquidity ",
     "Ecosystem Development ",
     "Team",
@@ -2668,6 +2669,7 @@ const HomePage = () => {
                       <div className="chart_text chart_1 lh-sm">
                         750,000
                         <span className="text-white-50 d-block">LBP & Uniswap Liquidity</span>
+
                       </div>
                     </Col>
                     {/*<Col sm={6} className="d-flex align-items-center my-3">
