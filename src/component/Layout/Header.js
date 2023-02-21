@@ -9,6 +9,7 @@ import HamburgerMenu from '../HamburgerMenu'
 import tweeterIcon from '../../assets/image/tweeterIcon.svg';
 import discordIcon from '../../assets/image/DiscordIcon.svg'
 import telegramIcon from '../../assets/image/telegram.svg'
+import mediumIcon from '../../assets/image/medium.svg'
 import ScrollToTop from "react-scroll-to-top";
 
 function Header() {
@@ -48,8 +49,7 @@ function Header() {
                     {/*<img src={dashogo} alt="dash_logo" className='img-fluid' />*/}
                 </div>}
                 <div className="socialIcon ">
-               {/*  <a target="_blank" href="https://t.me/TrackDaoGroup"><p className="mb-0 fs-16px fw-300 tweeterIcon" ><img src={telegramIcon} /></p></a>*/}
-
+               <a target="_blank" href="https://trackdao.medium.com/"><p className="mb-0 fs-16px fw-300 tweeterIcon" ><img src={mediumIcon} /></p></a>
                 <a target="_blank" href="https://twitter.com/NFT_TrackDao"><p className="mb-0 fs-16px fw-300 tweeterIcon"><img src={tweeterIcon} /></p></a>
                  {/* <a target="_blank" href="https://discord.gg/JJNHWyhEvP"><p className="mb-0 fs-16px fw-300 tweeterIcon"><img src={discordIcon} /></p></a>*/}
 
