@@ -1,60 +1,65 @@
 import React, { useEffect, useContext, useRef, useState } from "react";
-import { Col, Container, Row  } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import infoimg from "../assets/image/info.svg";
 // import slide_img1 from "../assets/image/slide_img.png";
 import red_caret_up from "../assets/image/red_caret_up.png";
 import Chartone from "../pages/ChartOne.js";
 import ChartTwo from "../pages/ChartTwo.js";
 import * as Loader from "react-loader-spinner";
-import { Web3Context } from '../web3/contexts/web3Context'
-import { poolMethods } from '../web3/functions/factory'
-import axios from 'axios';
-import moment from 'moment';
-import { getAllTrack, addTrack } from '../action/api'
+import { Web3Context } from "../web3/contexts/web3Context";
+import { poolMethods } from "../web3/functions/factory";
+import axios from "axios";
+import moment from "moment";
+import { getAllTrack, addTrack } from "../action/api";
 // import { toast } from "react-toastify";
 
 const DashboardPage = () => {
-  const { networkDetails, handleConnect, loading, setLoading } = useContext(Web3Context)
-  const [state, setState] = useState({})
-  const [priceTarget, setPriceTarget] = useState(0)
-  const [oracleRate, setOracleRate] = useState(0)
-  const [floorPrice, setFloorPrice] = useState()
-  const [getAllTrackData, setGetAllTrackData] = useState()
-  const [getImages, setGetImages] = useState()
-  const [timerDays, setTimerDays] = useState("00")
-  const [timerHours, setTimerHours] = useState("00")
-  const [timerMinutes, setTimerMinutes] = useState("00")
-  const [timerSeconds, setTimerSeconds] = useState("00")
+  const { networkDetails, handleConnect, loading, setLoading } =
+    useContext(Web3Context);
+  const [state, setState] = useState({});
+  const [priceTarget, setPriceTarget] = useState(0);
+  const [oracleRate, setOracleRate] = useState(0);
+  const [floorPrice, setFloorPrice] = useState();
+  const [getAllTrackData, setGetAllTrackData] = useState();
+  const [getImages, setGetImages] = useState();
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
   let interval = useRef();
   const startTimer = () => {
-    const getDate = new Date().getTime()
+    const getDate = new Date().getTime();
     // const currentDate = moment(getDate).format('MMM DD, yyy')
-    const countdownDate = new Date(`${moment(getDate).format('MMM DD, yyy')} 24:00:00`).getTime();
+    const countdownDate = new Date(
+      `${moment(getDate).format("MMM DD, yyy")} 24:00:00`
+    ).getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       if (distance < 0) {
         //stop timer
-        clearInterval(interval.current)
+        clearInterval(interval.current);
       } else {
         //update timer
-        setTimerDays(days)
-        setTimerHours(hours < 10 ? `0${hours}` : hours)
-        setTimerMinutes(minutes < 10 ? `0${minutes}` : minutes)
-        setTimerSeconds(seconds < 10 ? `0${seconds}` : seconds)
+        setTimerDays(days);
+        setTimerHours(hours < 10 ? `0${hours}` : hours);
+        setTimerMinutes(minutes < 10 ? `0${minutes}` : minutes);
+        setTimerSeconds(seconds < 10 ? `0${seconds}` : seconds);
       }
     }, 1000);
-  }
+  };
   useEffect(() => {
     startTimer();
     return () => {
-      clearInterval(interval.current)
-    }
-  }, [])
+      clearInterval(interval.current);
+    };
+  }, []);
 
   const image = [
     "https://lh3.googleusercontent.com/Czn9y9yAUpvuI6SGoVSnNe29_kZ84Ey_9saCrdpA7a5j2_8IWlUFSBM3_GMkjBPmbG8AS1jWtrzgQG4nCsyAlR_VtEI0fXMeKD8ILA=w286",
@@ -67,7 +72,7 @@ const DashboardPage = () => {
     "https://lh3.googleusercontent.com/pjja9yQOgIzrAfFPwgXi-KfQTz-Kxw-jZkDGoA0XGfYJc1325nQ9vc5xi1-eyFtM0lIETWInSGagyOAXsw2DqAIK1IE15jWeE_2U=w286",
     "https://lh3.googleusercontent.com/SLewJKxPmXfpFEdGBmlH_BMN3MdI5BBPi3xvr0TAKhGRx4f09msqKYzT1U1tZbAU8aSQVmjjfuWMktfHITHRcu5tiBBI7V5FEc15wQ=w286",
     "https://lh3.googleusercontent.com/AJ_40kO009xD-XE2Wyy0ANYKi9uzVYQAaybVGIWBXMA4cIKdggBWG6WHxXZTv4pdAR0OvA_i7X0hapqWixW12nvqHvclqcRpgcrtsg0=w286",
-  ]
+  ];
 
   const onRenderPrice = () => {
     const options = [
@@ -81,91 +86,119 @@ const DashboardPage = () => {
       "veefriends",
       "world-of-women-nft",
       "cyberkongz",
-    ]
+    ];
 
-    Promise.all(options.map(res => axios.get(`https://api.opensea.io/api/v1/collection/${res}/stats`))).then((result) => {
-      setFloorPrice(result)
-    })
+    Promise.all(
+      options.map((res) =>
+        axios.get(`https://api.opensea.io/api/v1/collection/${res}/stats`)
+      )
+    ).then((result) => {
+      setFloorPrice(result);
+    });
 
-    Promise.all(options.map(res => axios.get(`https://api.opensea.io/api/v1/collection/${res}`))).then((results) => {
-      setGetImages(results)
-    })
-  }
+    Promise.all(
+      options.map((res) =>
+        axios.get(`https://api.opensea.io/api/v1/collection/${res}`)
+      )
+    ).then((results) => {
+      setGetImages(results);
+    });
+  };
 
   const connectWallet = () => {
-    handleConnect()
-  }
+    handleConnect();
+  };
   const onRenderFirstContract = async () => {
-    setLoading(true)
-    const firstInstance = await poolMethods.getFirstInstance(networkDetails.web3);
+    setLoading(true);
+    const firstInstance = await poolMethods.getFirstInstance(
+      networkDetails.web3
+    );
     if (firstInstance) {
       try {
-        const totalSupply = await poolMethods.getTotalSupply(firstInstance, networkDetails.address);
-        const balanceOf = await poolMethods.getBalanceOf(firstInstance, networkDetails.address)
+        const totalSupply = await poolMethods.getTotalSupply(
+          firstInstance,
+          networkDetails.address
+        );
+        const balanceOf = await poolMethods.getBalanceOf(
+          firstInstance,
+          networkDetails.address
+        );
 
         setState({
           ...state,
           totalSupply: totalSupply,
-          Circulating: parseFloat(parseFloat(totalSupply) - parseFloat(balanceOf)).toFixed(2),
-        })
-        setLoading(false)
+          Circulating: parseFloat(
+            parseFloat(totalSupply) - parseFloat(balanceOf)
+          ).toFixed(2),
+        });
+        setLoading(false);
       } catch (error) {
-        setLoading(false)
-        console.log('error', error)
+        setLoading(false);
+        console.log("error", error);
       }
     }
-  }
+  };
 
   const onRenderSecondContract = async () => {
-    setLoading(true)
-    const secondInstance = await poolMethods.getSecondInstance(networkDetails.web3)
+    setLoading(true);
+    const secondInstance = await poolMethods.getSecondInstance(
+      networkDetails.web3
+    );
     if (secondInstance) {
       try {
-        const getData = await poolMethods.getDataSecond(secondInstance, networkDetails.address)
-        setPriceTarget(getData)
-        setLoading(false)
+        const getData = await poolMethods.getDataSecond(
+          secondInstance,
+          networkDetails.address
+        );
+        setPriceTarget(getData);
+        setLoading(false);
       } catch (error) {
-        setLoading(false)
-        console.log('error2', error)
+        setLoading(false);
+        console.log("error2", error);
       }
     }
-  }
+  };
 
   const onRenderThirdContrat = async () => {
-    setLoading(true)
-    const thirdInstance = await poolMethods.getThirdInstance(networkDetails.web3)
+    setLoading(true);
+    const thirdInstance = await poolMethods.getThirdInstance(
+      networkDetails.web3
+    );
     if (thirdInstance) {
       try {
-        const getData = await poolMethods.getDataThird(thirdInstance, networkDetails.address)
-        setOracleRate(getData)
-        setLoading(false)
+        const getData = await poolMethods.getDataThird(
+          thirdInstance,
+          networkDetails.address
+        );
+        setOracleRate(getData);
+        setLoading(false);
       } catch (error) {
-        setLoading(false)
-        console.log('error3', error)
+        setLoading(false);
+        console.log("error3", error);
       }
     }
-  }
+  };
 
   useEffect(() => {
     (async () => {
       if (networkDetails && networkDetails.connected) {
-        onRenderFirstContract()
-        onRenderSecondContract()
-        onRenderThirdContrat()
+        onRenderFirstContract();
+        onRenderSecondContract();
+        onRenderThirdContrat();
       }
-    })()
-  }, [networkDetails])
+    })();
+  }, [networkDetails]);
 
   useEffect(async () => {
-    const getATrack = await getAllTrack()
+    const getATrack = await getAllTrack();
     if (getATrack?.data?.responseData?.length > 0) {
-      setGetAllTrackData(getATrack.data.responseData)
+      setGetAllTrackData(getATrack.data.responseData);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     onRenderPrice();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -177,7 +210,6 @@ const DashboardPage = () => {
             color="#8DFF26"
             height={100}
             width={100}
-
           />
         </div>
       )}
@@ -186,31 +218,57 @@ const DashboardPage = () => {
           <Row>
             <Col xl={3} lg={6} className="mb-md-2">
               <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Next Recalibration</p>
-                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0"><span>{timerHours}H : {timerMinutes}M : {timerSeconds}S</span></p>
-                <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
-              </div>
-            </Col>
-            <Col xl={3} lg={6} className="mb-md-2">
-              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Oracle Rate</p>
-                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0"><span>ETH {oracleRate}</span></p>
-                <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
-              </div>
-            </Col>
-            <Col xl={3} lg={6} className="mb-md-2">
-              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Price Target</p>
-                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0"><span>ETH {priceTarget}</span></p>
-                <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
-              </div>
-            </Col>
-            <Col xl={3} lg={6} className="mb-md-2">
-              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
-                <p className="fs-18px  fw-300 opacity-50 text-white m-0">Circulating / Total Supply</p>
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">
+                  Next Recalibration
+                </p>
                 <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0">
-                  {state?.Circulating ? state?.Circulating : 0} / {state?.totalSupply ? state?.totalSupply : 0}</p>
-                <button className="bg-transparent border-0 info_gren_btn"><img src={infoimg} /></button>
+                  <span>
+                    {timerHours}H : {timerMinutes}M : {timerSeconds}S
+                  </span>
+                </p>
+                <button className="bg-transparent border-0 info_gren_btn">
+                  <img src={infoimg} />
+                </button>
+              </div>
+            </Col>
+            <Col xl={3} lg={6} className="mb-md-2">
+              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">
+                  Oracle Rate
+                </p>
+                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0">
+                  <span>ETH {oracleRate}</span>
+                </p>
+                <button className="bg-transparent border-0 info_gren_btn">
+                  <img src={infoimg} />
+                </button>
+              </div>
+            </Col>
+            <Col xl={3} lg={6} className="mb-md-2">
+              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">
+                  Price Target
+                </p>
+                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0">
+                  <span>ETH {priceTarget}</span>
+                </p>
+                <button className="bg-transparent border-0 info_gren_btn">
+                  <img src={infoimg} />
+                </button>
+              </div>
+            </Col>
+            <Col xl={3} lg={6} className="mb-md-2">
+              <div className="next_rebase d-flex flex-column justify-content-center green_shadow_bg">
+                <p className="fs-18px  fw-300 opacity-50 text-white m-0">
+                  Circulating / Total Supply
+                </p>
+                <p className="fs-lg-32px m-0 fw-400 opacity-1 text-white m-0">
+                  {state?.Circulating ? state?.Circulating : 0} /{" "}
+                  {state?.totalSupply ? state?.totalSupply : 0}
+                </p>
+                <button className="bg-transparent border-0 info_gren_btn">
+                  <img src={infoimg} />
+                </button>
               </div>
             </Col>
           </Row>
@@ -222,9 +280,7 @@ const DashboardPage = () => {
             <Col xl={6}>
               <div className="chart_item green_shadow_bg mb-5">
                 <div className="d-flex flex-wrap justify-content-between align-items-center">
-                  <div className="text-white fs-18px fw-400">
-                    Price
-                  </div>
+                  <div className="text-white fs-18px fw-400">Price</div>
                   <div className="days_btn">
                     <button>30Days</button>
                     <button>60Days</button>
@@ -233,7 +289,6 @@ const DashboardPage = () => {
                     <button>All</button>
                     <button>ABS</button>
                     <button>%</button>
-
                   </div>
                 </div>
                 <Chartone getAllTrackData={getAllTrackData} />
@@ -242,27 +297,27 @@ const DashboardPage = () => {
                     <Col xl={8}>
                       <div className="d-flex">
                         <div className="price-target_box">
-                          <div className="text-white">
-                            --
-                          </div>
+                          <div className="text-white">--</div>
                           <div>
-                            <p className="strip_text_cl fs-16px fw-400">Price Target</p>
+                            <p className="strip_text_cl fs-16px fw-400">
+                              Price Target
+                            </p>
                           </div>
                         </div>
                         <div className="price-target_box">
-                          <div className="text-white">
-                            --
-                          </div>
+                          <div className="text-white">--</div>
                           <div>
-                            <p className="strip_text_cl fs-16px fw-400">Expansion Threshold</p>
+                            <p className="strip_text_cl fs-16px fw-400">
+                              Expansion Threshold
+                            </p>
                           </div>
                         </div>
                         <div className="price-target_box">
-                          <div className="text-white">
-                            --
-                          </div>
+                          <div className="text-white">--</div>
                           <div>
-                            <p className="strip_text_cl fs-16px fw-400">Contraction Threshold</p>
+                            <p className="strip_text_cl fs-16px fw-400">
+                              Contraction Threshold
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -271,33 +326,38 @@ const DashboardPage = () => {
                       <div className="unitvolume_div d-flex justify-content-end">
                         <div>
                           <div>
-                            <p className="strip_text_cl fs-14px fw-400">High 3.75</p>
+                            <p className="strip_text_cl fs-14px fw-400">
+                              High 3.75
+                            </p>
                           </div>
                           <div>
-                            <p className="strip_text_cl fs-14px fw-400">Low 0.15</p>
+                            <p className="strip_text_cl fs-14px fw-400">
+                              Low 0.15
+                            </p>
                           </div>
                         </div>
 
                         <div>
                           <div>
-                            <p className="strip_text_cl fs-14px fw-400">Average 1.14</p>
+                            <p className="strip_text_cl fs-14px fw-400">
+                              Average 1.14
+                            </p>
                           </div>
                           <div>
-                            <p className=" strip_text_cl fs-14px fw-400">Median 1.05</p>
+                            <p className=" strip_text_cl fs-14px fw-400">
+                              Median 1.05
+                            </p>
                           </div>
                         </div>
                       </div>
                     </Col>
-
                   </Row>
                 </div>
               </div>
 
               <div className="chart_item green_shadow_bg">
                 <div className="d-flex flex-wrap justify-content-between align-items-center">
-                  <div className="text-white fs-18px fw-400">
-                    Supply
-                  </div>
+                  <div className="text-white fs-18px fw-400">Supply</div>
                   <div className="days_btn">
                     <button>30Days</button>
                     <button>60Days</button>
@@ -306,8 +366,6 @@ const DashboardPage = () => {
                     <button>All</button>
                     <button>ABS</button>
                     <button>%</button>
-
-
                   </div>
                 </div>
 
@@ -317,41 +375,41 @@ const DashboardPage = () => {
                     <Col xl={3} lg={6}>
                       <div className="price-target_box">
                         <div>
-                          <p className="strip_text_cl fs-16px fw-400 mb-2">High</p>
+                          <p className="strip_text_cl fs-16px fw-400 mb-2">
+                            High
+                          </p>
                         </div>
-                        <div className="text-white">
-                          514.68M
-                        </div>
+                        <div className="text-white">514.68M</div>
                       </div>
                     </Col>
                     <Col xl={3} lg={6}>
                       <div className="price-target_box">
                         <div>
-                          <p className="strip_text_cl fs-16px fw-400 mb-2">Low</p>
+                          <p className="strip_text_cl fs-16px fw-400 mb-2">
+                            Low
+                          </p>
                         </div>
-                        <div className="text-white">
-                          260.29M
-                        </div>
+                        <div className="text-white">260.29M</div>
                       </div>
                     </Col>
                     <Col xl={3} lg={6}>
                       <div className="price-target_box">
                         <div>
-                          <p className="strip_text_cl fs-16px fw-400 mb-2">Median</p>
+                          <p className="strip_text_cl fs-16px fw-400 mb-2">
+                            Median
+                          </p>
                         </div>
-                        <div className="text-white">
-                          365.99M
-                        </div>
+                        <div className="text-white">365.99M</div>
                       </div>
                     </Col>
                     <Col xl={3} lg={6}>
                       <div className="price-target_box">
                         <div>
-                          <p className="strip_text_cl fs-16px fw-400 mb-2">Price Target</p>
+                          <p className="strip_text_cl fs-16px fw-400 mb-2">
+                            Price Target
+                          </p>
                         </div>
-                        <div className="text-white">
-                          514.68M
-                        </div>
+                        <div className="text-white">514.68M</div>
                       </div>
                     </Col>
                   </Row>
@@ -360,43 +418,58 @@ const DashboardPage = () => {
             </Col>
             <Col xl={6}>
               <div className="Blue_chip_nft green_shadow_bg">
-                <h2 className="gren_title fs-45px  fw-700 text-center pt-5">Bluechip NFTs</h2>
+                <h2 className="gren_title fs-45px  fw-700 text-center pt-5">
+                  Bluechip NFTs
+                </h2>
                 <Row>
-                  {floorPrice && floorPrice.length > 0 &&
+                  {floorPrice &&
+                    floorPrice.length > 0 &&
                     floorPrice.map((res, i) => {
-                      const Price = res.data.stats.floor_price
+                      const Price = res.data.stats.floor_price;
                       return (
                         <Col xl={6} className="mb-3" key={i + 1}>
                           <div className="bluechip_img img-border-box">
                             <div className="bluechip_inner">
-                              <img src={image[i]} alt="slide_img1" className="img-fluid mb-2" />
+                              <img
+                                src={image[i]}
+                                alt="slide_img1"
+                                className="img-fluid mb-2"
+                              />
                               <div className="fs-25px fw-400 text-white">
                                 {getImages && getImages[i].data.collection.slug}
                               </div>
                               <div>
-                                <button className="flor_price_btn fs-18px fw-400  mt-2">FLOOR PRICE -${Price !== null ? Price : 0}</button>
+                                <button className="flor_price_btn fs-18px fw-400  mt-2">
+                                  FLOOR PRICE -${Price !== null ? Price : 0}
+                                </button>
                               </div>
                             </div>
                             <div className="bluechip_oeverlap">
                               <div className="fs-45px fw-700 text-white">
                                 {getImages && getImages[i].data.collection.slug}
                               </div>
-                              <p className="fs-18px fw-400 text-white">FLOOR PRICE -${Price !== null ? Price : 0}</p>
+                              <p className="fs-18px fw-400 text-white">
+                                FLOOR PRICE -${Price !== null ? Price : 0}
+                              </p>
                               <div className="flor_price_increse fs-32px fw-400">
-                                22% <img src={red_caret_up} alt="red_caret_up" className="img-fluid" />
+                                22%{" "}
+                                <img
+                                  src={red_caret_up}
+                                  alt="red_caret_up"
+                                  className="img-fluid"
+                                />
                               </div>
                             </div>
                           </div>
                         </Col>
-                      )
-                    })
-                  }
+                      );
+                    })}
                 </Row>
               </div>
             </Col>
-          </Row >
-        </Container >
-      </section >
+          </Row>
+        </Container>
+      </section>
     </>
   );
 };
