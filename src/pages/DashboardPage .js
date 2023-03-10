@@ -61,7 +61,8 @@ const DashboardPage = () => {
     "https://lh3.googleusercontent.com/6PFIYICLqlR-f7oDeROPorLObT-tjNEiUBkY0r-hnrjA5ypcvqyC5UhXBcuHvQuadW8ac1MVveevIw9usMz6kC0MZ6aQLSKXBSZtcQ=w286",
     "https://lh3.googleusercontent.com/VcINO7tS_jlFUDPoEAAAcU9scOLfTNKWHB8u2U30BwZMFFS5eUfQeeaDTz_qKAQ1mt6jjUOFg-1bdSprvk53zGpGsstwwLORQur9Zg=w286",
     "https://lh3.googleusercontent.com/I7yxsg5cBindbstIuEctPiPLgK3QxAmWIU2Uqe5xAK3dAnl5L4TipPygOf5ynpr_7AkxKDPdxD1OaoeTSjdyzH7OYPgQqNHkyWS7xWY=w600",
-    "https://lh3.googleusercontent.com/bY7Shp-jwm7gzfOAD684dD6Qk87utF5m5AHHxSmg0j1Zzx3VOH2wazftdA4Q30LrU7ESRid79O4Wi6VcjRas3mnOh4HuhxYHqQA_7Z8=w286",
+    "https://i.seadn.io/gae/f5_47BBfCRDbk30uVaJluL9JycAgH0L6FpoYAvyn78DYEu7O54XKiN7x2cLAnNebrd7w30T4mh5hTI1et7tLh1rMX9C5h3wc6S9Cb7s?auto=format&w=1000",
+    // "https://lh3.googleusercontent.com/bY7Shp-jwm7gzfOAD684dD6Qk87utF5m5AHHxSmg0j1Zzx3VOH2wazftdA4Q30LrU7ESRid79O4Wi6VcjRas3mnOh4HuhxYHqQA_7Z8=w286",
     "https://lh3.googleusercontent.com/CihDNOBwzoCK__mgJgFFyRazaOm-5WGvxp4YdTLLyUiq86seRPPfUN7aZOCArpGvG2RLpBjpy0b8RukVIWD4a0GkLLxJ_6xAPKydZ2I=w286",
     "https://lh3.googleusercontent.com/2ZfTLFDnlFS-SbVf_h5fV2Dwnx8FTt_EJZajLlY8K08uZXMMkwjMohq5fAfhRoylrk68kaNkCNOhbfQY-FYJbrDqdc6XfetMiwVS=w286",
     "https://lh3.googleusercontent.com/pjja9yQOgIzrAfFPwgXi-KfQTz-Kxw-jZkDGoA0XGfYJc1325nQ9vc5xi1-eyFtM0lIETWInSGagyOAXsw2DqAIK1IE15jWeE_2U=w286",
@@ -75,7 +76,7 @@ const DashboardPage = () => {
       "invisiblefriends",
       "clonex",
       "azuki",
-      "0xmayc-official",
+      "mutant-ape-yacht-club",
       "doodles-official",
       "cool-cats-nft",
       "veefriends",
@@ -83,7 +84,7 @@ const DashboardPage = () => {
       "cyberkongz",
     ]
 
-    Promise.all(options.map(res => axios.get(`https://api.opensea.io/api/v1/collection/${res}/stats`))).then((result) => {
+    Promise.all(options.map(res =>  axios.get(`https://api.opensea.io/api/v1/collection/${res}/stats`))).then((result) => {
       setFloorPrice(result)
     })
 
@@ -158,6 +159,7 @@ const DashboardPage = () => {
 
   useEffect(async () => {
     const getATrack = await getAllTrack()
+    console.log("getATrack", getATrack);
     if (getATrack?.data?.responseData?.length > 0) {
       setGetAllTrackData(getATrack.data.responseData)
     }

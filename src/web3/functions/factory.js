@@ -9,8 +9,8 @@ function getFirstInstance(web3) {
         if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
-                    enviornment.FirstABI,
-                    enviornment.FirstAddress
+                    enviornment.TRACKTokenABI,
+                    enviornment.TRACKTokenAdress
                 );
 
                 if (Instance) {
@@ -30,8 +30,8 @@ function getSecondInstance(web3) {
         if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
-                    enviornment.SecondABI,
-                    enviornment.SecondAddress
+                    enviornment.TargetPriceOracleABI,
+                    enviornment.TargetPriceOracleAdress
                 );
 
                 if (Instance) {
@@ -51,8 +51,8 @@ function getThirdInstance(web3) {
         if (web3 && web3 !== '') {
             try {
                 let Instance = await new web3.eth.Contract(
-                    enviornment.ThirdABI,
-                    enviornment.ThirdAddress
+                    enviornment.MarketPriceOracleABI,
+                    enviornment.MarketPriceOracleAdress
                 );
 
                 if (Instance) {
